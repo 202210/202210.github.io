@@ -60,7 +60,6 @@ body:before{
 
 .ad .content img{
   height:100px;
-  width:cala(100vh / 2);
 }
 
 .starter {
@@ -91,9 +90,15 @@ body:before{
 }
 
 .bottom{
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    right:0px;
+
   background-color:#54c;
   color:#cbf;
   opacity:0.97;
+  
 }
 
 .viewer img{
