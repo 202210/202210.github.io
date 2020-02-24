@@ -84,14 +84,11 @@
   <div class="container">
     <div class="starter">
       <!-- .r***表示行 .c***表示列 -->
-      <div class="row rhomework" id="homework">
+      <div class="row">
         <div class="col-sm-8 col-md-8 col-lg-8 chomework">
           <h1>作业</h1>
-          <p><a href="" class="text-muted"><span class="glyphicon glyphicon-time"></span>查看曾经的作业</a></p>
           <small>2020.1.10的作业</small>
           <p class="text-warning">只展示周末作业</p>
-          <p class="text-info">请各科课代表<a href="contect.html" class="text-primary"><span class="glyphicon glyphicon-hand-right"></span>联系我</a>补充修正</p>
-
 
           <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
             <div class="list-group">
@@ -240,11 +237,12 @@
           </div>
 
         </div>
-      </div>
 
-      <div class="col-sm-4 col-md-4 col-lg-4" id="announcement">
-        <h1>公告</h1>
-        <small>今天是<span id="currentTime">"此处应显示当前日期，启用JavaScript以查看"</span></small>
+        <div class="col-sm-4 col-md-4 col-lg-4" id="announcement">
+          <h1>公告</h1>
+          <small>今天是<span id="currentTime">"此处应显示当前日期，启用JavaScript以查看"</span></small>
+
+        </div>
 
       </div>
 
@@ -252,11 +250,11 @@
 
   </div><!-- /.container -->
 
-  <div class="row bottom" id="bottom">
+  <footer class="row bottom" id="bottom">
     图标作者：<a href="http://glyphicons.com/">http://glyphicons.com/</a>。
     <a href="http://jigsaw.w3.org/css-validator/check/referer">check</a>
     <a href="test.html">test</a>
-  </div>
+  </footer>
   <div class="imageviewer">
     <img id="image-viewing" src="" />
   </div>
@@ -293,7 +291,7 @@
         leftday += 1;
       }
       lefttime = leftday + "天" + lefthour + "小时" + leftminute + "分";
-      leftTime.innerHTML = lefttime;
+      /*leftTime.innerHTML = lefttime;*/
     }
     function add_zero(temp) {
       if (temp < 10) return "0" + temp;

@@ -2,6 +2,17 @@
 {
 }
 
+.download {
+    margin: 15px;
+    border: dotted 5px #efc10cd1;
+    background: rgba(255, 222, 160, 0.55);
+}
+.view {
+    margin: 15px;
+    border: dotted 5px #b3b1ff;
+    background: rgba(187, 255, 255, 0.58);
+}
+
 
 .li_three .ul_three, .li_two .ul_two {
     display:none;
