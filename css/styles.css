@@ -120,3 +120,6 @@ body:before{
   z-index:160;
 }
 
+footer{
+    display:none;
+}
