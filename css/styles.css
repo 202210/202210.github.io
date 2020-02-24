@@ -1,0 +1,117 @@
+
+.panel,.alert,.list-group{
+  opacity:0.87;
+}
+
+.list-group-item-title{
+  /*color:linear-gradient(to right, #d9afd9 0%, #97d9e1 100%);*/
+  color:#efffe9;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  
+}
+
+img{
+  transition:0.3s;
+  width:100%;
+  opacity:1;
+}
+
+body {
+  padding-top: 50px;
+}
+body:before{
+    background-image:url(https://i0.hdslb.com/bfs/article/5e85dcc9584a66d176c6422dcc2b963a4700c904.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width:100%;
+    height:100vh;
+    background-size: cover;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0px;
+    z-index: -2;/*-1做背景*/
+    filter: opacity(55%);
+	padding-top:70px;
+}
+
+.plane{
+  background-color:RGBA(218, 169, 175, 0.95);
+  top:0;
+  left:0;
+  position:fixed;
+  content:"";
+  width:100vh;
+  height:100vh;
+  z-index:100;
+}
+
+
+.ad .content{
+  position:fixed;
+  top:70px;
+  width:100%;
+  height:100vh;
+  z-index:105;
+  color:#df6978;
+  text-align:center;
+  font-size:5.5em;
+}
+
+.ad .content img{
+  height:100px;
+  width:cala(100vh / 2);
+}
+
+.starter {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+
+
+
+.jumbotron{
+    /*background-image:url(https://uploads.5068.com/allimg/161226/67-1612261R916-51.jpg);*/
+	/*background:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576871535279&di=c4ef6cbfeecac0b1d1c03dcc6a403bba&imgtype=0&src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Farchive%2F1cf6657329815273c620e1daae1f6072f3c4fffc.jpg);*/
+	
+	background:url(../img/2020springfestival.png);
+	background-size:160%;
+	background-position:-60px -45px;
+	color: rgba(190,97,97,0.9);
+	
+	font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+.jumbotron p{
+  font-size:3em;
+  transform:translate(20px,-10px);
+  text-shadow:0 0 15px #fff;
+  
+}
+
+.bottom{
+  background-color:#54c;
+  color:#cbf;
+  opacity:0.97;
+}
+
+.viewer img{
+  
+  height:auto;
+  width:100%;
+  
+  position:fixed;
+  left:0;
+  top:10%;
+  z-index:150;
+}
+
+.smallPhoto img{
+  position:fixed;
+  left:0;
+  top:50px;
+  height:15vh;
+  z-index:160;
+}
+
