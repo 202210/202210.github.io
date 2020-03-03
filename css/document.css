@@ -15,12 +15,15 @@
 
 
 .li_three .ul_three, .li_two .ul_two {
-    display:none;
-    transform:translate(100%,-100%) rotate(45deg);
-    transition:1s;
+    transform:translate3d(0,0,1000px);
+    opacity:0;
+    height:0;
+
+    transition-duration:0.3s;
 }
 
 .li_three:hover .ul_three, .li_two:hover .ul_two {
-    display: block;
-    transition:1s;
+    transform: translate3d(0,0);
+    height: 60px;
+    opacity: 1;
 }
