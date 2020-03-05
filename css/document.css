@@ -1,12 +1,12 @@
-﻿body
-{
+﻿body {
 }
 
 .download {
     margin: 15px;
-    border: dotted 5px #efc10cd1;
+    border: dotted 5px #efc10c;
     background: rgba(255, 222, 160, 0.55);
 }
+
 .view {
     margin: 15px;
     border: dotted 5px #b3b1ff;
@@ -15,15 +15,51 @@
 
 
 .li_three .ul_three, .li_two .ul_two {
-    transform:translate3d(0,0,1000px);
-    opacity:0;
-    height:0;
-
-    transition-duration:0.3s;
+    transform: translate3d(0,0,1000px);
+    opacity: 0;
+    height: 0;
+    transition-duration: 0.3s;
 }
 
 .li_three:hover .ul_three, .li_two:hover .ul_two {
-    transform: translate3d(0,0);
-    height: 60px;
+    transform: translate3d(0,0,0);
+    height: 140px;
     opacity: 1;
 }
+
+
+.record-title {
+    background-color: azure;
+    box-shadow: #ddddde 5px 5px 10px 5px,#fffffd -50px -10px 0 10px inset;
+    margin: 15px;
+}
+
+.dropdown {
+}
+
+.dropdown-btn {
+    height: 50px;
+    width: 200px;
+    padding: 15px;
+    display: inline-block;
+    transition: 0.3s;
+    background-color: #efeffd;
+    border-radius: 25px 25px;
+    box-shadow: #efe1ff -10px -10px 10px 10px inset;
+}
+
+    .dropdown-btn:hover i {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-btn ul {
+        transform: translate3d(0,0,1000px);
+        height: 0px;
+        opacity: 0;
+    }
+
+    .dropdown-btn:hover ul {
+        transform: translate3d(0,0);
+        height: 140px;
+        opacity: 1;
+    }
