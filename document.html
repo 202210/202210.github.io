@@ -18,11 +18,8 @@
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/document.css" rel="stylesheet">
 
-  <!-- awesome图标 -->
-  <script src="https://use.fontawesome.com/9a90a02525.js"></script>
-
-
-
+  <!-- awesome图标 taimanle- ->
+  <script src="https://use.fontawesome.com/9a90a02525.js"></script>-->
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -68,157 +65,61 @@
       <!-- VCam教程开始 -->
       <div class="col-sm-6 col-md-6 col-lg-6">
         <!--
-    <h2>虚拟摄像头是个啥：</h2>
-    <p>就在电脑上再安一个摄像头，显示的是你设置的东西，包括照片 GIF 视频 实时屏幕等等，甚至加特效</p>
-    <hr />
-    <p>
-      如果有个“如图.jpg”（没有就算了）：<br />
-      ①按win+r，输入regedit并运行<br />
-      ②HKEY_USERS里有两个特长的不带class的，记住有里面software有e2esoft的（重命名复制）<br />
-      ③右键reg文件，打开方式记事本，把H什么那块替换为HKEY_USERS/加特长的<br />
-      ④保存关闭文件，双击文件，运行它
-    </p>
-    <hr />
-    <p>“缩小”水印的办法：在选项里找到“摄像头设置” 调大“默认视频大小”</p>
-    <p>虚拟摄像头占内存大，容易卡，慢慢操作，甚至可以卡bug</p>
-    <p>⏸就是定格，⏹键就是停止（将播放软件自带的图像）</p>
-    <p>尽量用jpg格式的图片，bmp/png/gif不稳定，图片和视频一起放也不稳定</p>
-    <p><strong>花钱买个高级的虚拟摄像机以上情况均不会出现</strong></p>
-    <p>不负因使用虚拟摄像头而死亡的责任（比如你用屏幕分享分享老师的脸或者R18等等）</p>
-  -->
+          <h2>虚拟摄像头是个啥：</h2>
+          <p>就在电脑上再安一个摄像头，显示的是你设置的东西，包括照片 GIF 视频 实时屏幕等等，甚至加特效</p>
+          <hr />
+          <p>
+            如果有个“如图.jpg”（没有就算了）：<br />
+            ①按win+r，输入regedit并运行<br />
+            ②HKEY_USERS里有两个特长的不带class的，记住有里面software有e2esoft的（重命名复制）<br />
+            ③右键reg文件，打开方式记事本，把H什么那块替换为HKEY_USERS/加特长的<br />
+            ④保存关闭文件，双击文件，运行它
+          </p>
+          <hr />
+          <p>“缩小”水印的办法：在选项里找到“摄像头设置” 调大“默认视频大小”</p>
+          <p>虚拟摄像头占内存大，容易卡，慢慢操作，甚至可以卡bug</p>
+          <p>⏸就是定格，⏹键就是停止（将播放软件自带的图像）</p>
+          <p>尽量用jpg格式的图片，bmp/png/gif不稳定，图片和视频一起放也不稳定</p>
+          <p><strong>花钱买个高级的虚拟摄像机以上情况均不会出现</strong></p>
+          <p>不负因使用虚拟摄像头而死亡的责任（比如你用屏幕分享分享老师的脸或者R18等等）</p>
+        -->
         <div class="record-title">
           <h1>录播</h1>
           <h4>有的效果不太好，没放里面或以括号标注</h4>
-          <small>flv格式，1小时不到800M左右</small>发现有问题告诉我呀...
+          <small>flv格式，1小时900M左右</small>
+          <span>
+            <br />
+            发现有问题告诉我呀..（传成啥样我也没看）
+            <br />
+            发现有问题告诉我呀..
+            <br />
+            发现有问题告诉我呀..
+            <br />
+          </span>
         </div>
-        <!--
-  <div class="dropdown">
-    <div class="dropdown-btn">
-      <p>选择日期<i class="fa fa-chevron-down" aria-hidden="true"></i></p>
-      <ul id="dropdown-content-date" class="dropdown-content">
 
-      </ul>
+        <div class="dropdown row">
+          <div class="dropdown-btn col-lg-6 col-md-6 col-sm-6">
+            <p><span id="dropdown-date-title">选择日期</span><i class="fa fa-chevron-down" aria-hidden="true"></i></p>
+            <ul id="dropdown-content-date" class="dropdown-content">
+              <li onclick='delete condition.day; Element("dropdown-date-title").innerHTML = "所有日子"; videoSelect();'>所有日子</li>
+            </ul>
 
-    </div>
-    <div class="dropdown-btn">
-      <p>选择科目<i class="fa fa-chevron-down" aria-hidden="true"></i></p>
-      <ul id="dropdown-content-subject" class="dropdown-content">
-      </ul>
-    </div>
-  </div>
-  -->
-
-
-
-        <div>
-          <h4>3.2</h4>
-          <p>
-            数学（只录了下课前8分钟）
-            <br />
-            链接：<a href="https://pan.baidu.com/s/1O4RbWIx3qOO9NLs3edtBdg">https://pan.baidu.com/s/1O4RbWIx3qOO9NLs3edtBdg</a>
-            <br />
-            提取码：ptgv
-          </p>
+          </div>
+          <div class="dropdown-btn col-lg-6 col-md-6 col-sm-6">
+            <p><span id="dropdown-subject-title">选择科目</span><i class="fa fa-chevron-down" aria-hidden="true"></i></p>
+            <ul id="dropdown-content-subject" class="dropdown-content">
+              <li  onclick='delete condition.subject; Element("dropdown-subject-title").innerHTML = "所有科目";videoSelect();'>所有科目</li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <h4>3.3</h4>
-          <p>
-            化学（Cr老师自带电音）
-            <br />
-            链接：<a href="https://pan.baidu.com/s/10zFTZdg89uA_Dbj-WeCuJQ">https://pan.baidu.com/s/10zFTZdg89uA_Dbj-WeCuJQ</a>
-            <br />
-            提取码：6ywz
-          </p>
-          <p>
-            生物（无前十分钟）
-            <br />
-            链接：<a href="https://pan.baidu.com/s/1lKmLCteNFGKxmGWAy-ItNQ">https://pan.baidu.com/s/1lKmLCteNFGKxmGWAy-ItNQ</a>
-            <br />
-            提取码：hp8d
-          </p>
+        <div class="result-box">
+          <ul id="result-content" class="result-content">
+          </ul>
         </div>
-        <div>
-          <h4>3.4</h4>
-          <p>
-            物理
-            <br />
-            链接：<a href="https://pan.baidu.com/s/1ovQsWSWr_uBq1zEsArsjxA">https://pan.baidu.com/s/1ovQsWSWr_uBq1zEsArsjxA</a>
-            <br />
-            提取码：ecrq
-          </p>
-          <p>
-            英语
-            <br />
-            链接：<a href="https://pan.baidu.com/s/1eaoi297exZvRbUAnvkgEhw">https://pan.baidu.com/s/1eaoi297exZvRbUAnvkgEhw</a>
-            <br />
-            提取码：qr18
-            <br />
-            英语(晚课)
-            <br />
-            链接：<a href="https://pan.baidu.com/s/1Lh84CVyXORnZw4d2_bqENA">https://pan.baidu.com/s/1Lh84CVyXORnZw4d2_bqENA</a>
-            <br />
-            提取码：ozdn
-          </p>
-          <p>
-            物理
-            <br />
-            链接：<a href="https://pan.baidu.com/s/1lejfsrA32lYV8oasK9Jsdw">https://pan.baidu.com/s/1lejfsrA32lYV8oasK9Jsdw</a>
-            <br />
-            提取码：ttq9
-          </p>
-          <p>
-            化学
-            <br />
-            链接：<a href="https://pan.baidu.com/s/1vAnxDAlC0p7r8Z_amGQ62A">https://pan.baidu.com/s/1vAnxDAlC0p7r8Z_amGQ62A</a>
-            <br />
-            提取码：swil
-          </p>
-          <p>
-            生物
-            <br />
-            链接：<a href="https://pan.baidu.com/s/1NpGcSAFRveAFjzyqUYwACg">https://pan.baidu.com/s/1NpGcSAFRveAFjzyqUYwACg</a>
-            <br />
-            提取码：m189
-          </p>
-        </div>
-        <div>
-          <h4>3.5</h4>
-          <p>
-            英语
-            <br />
-            链接：<a href="https://pan.baidu.com/s/1oAZo5HEHXkZz_EhvKskEaA">https://pan.baidu.com/s/1oAZo5HEHXkZz_EhvKskEaA</a>
-            <br />
-            提取码：qr18
-          </p>
-          <p>
-            物理（晚课）
-            <br />
-            链接：<a href="我忘了.html">欸还没呢</a>
-            <br />
-            提取码：xjel
-          </p>
-          <p>
-            数学
-            <br />
-            链接：<a href="https://pan.baidu.com/s/1bqyIn-ktLX_jpQEeS606nw">https://pan.baidu.com/s/1bqyIn-ktLX_jpQEeS606nw</a>
-            <br />
-            提取码：fvsr
-          </p>
-          <p>
-            生物
-            <br />
-            链接：<a href="https://pan.baidu.com/s/1fw532KaEBgRjKUAWQMek7A">https://pan.baidu.com/s/1fw532KaEBgRjKUAWQMek7A</a>
-            <br />
-            提取码：t7p3
-          </p>
-          <p>
-            语文
-            <br />
-            链接：<a href="https://pan.baidu.com/s/16Yh61Z9RJhAbQssYTnrtAA">https://pan.baidu.com/s/16Yh61Z9RJhAbQssYTnrtAA</a>
-            <br />
-            提取码：yoxf
-          </p>
-        </div>
+
+
+
         <!--p>压缩画质了，能比以前小点</p-->
       </div>
       <!-- VCam教程结束 -->
@@ -301,17 +202,160 @@
 
   <script src="js/basic.js"></script>
   <script language="javascript">
-    function videoSelect() {
+    var condition = {
 
+    };
+
+    
+    var subject = new Array("语文", "数学", "英语", "物理", "化学", "生物");
+
+    function videoSelect() {
+      //@param condition 过滤条件
+      //@param data 需要过滤的数据
+      const filter = (condition, data) => {
+        return data.filter(item => {
+          return Object.keys(condition).every(key => {
+            return String(item[key]).toLowerCase().includes(String(condition[key]).trim().toLowerCase())
+          })
+        })
+      }
+      // 假设选择的条件如下
+      let results = filter(condition, video);
+      Element("result-content").innerHTML = "";
+
+      for (var k = 0; k < results.length; k++) {
+        var li = document.createElement("li");
+        li.className = "result";
+        li.innerHTML = "<h4>" + results[k].month + "." + results[k].day + "</h4><h5>" + subject[results[k].subject] + (results[k].night ? "<small>(晚课)</small>" : "") + "</h5><p><a href='" + results[k].href + "target='_blank' '>点击跳转</a><br />提取码：<strong>" + results[k].code + "</strong></p>";
+
+        //将小li放在父容器中
+        Element("result-content").appendChild(li);
+
+      }
     }
+
+    const video = [
+      {
+        month: 3,
+        day: 3,
+        subject: 4,
+        href: "https://pan.baidu.com/s/10zFTZdg89uA_Dbj-WeCuJQ",
+        code: "6ywz",
+        night: false
+      },
+      {
+        month: 3,
+        day: 3,
+        subject: 5,
+        href: "https://pan.baidu.com/s/1lKmLCteNFGKxmGWAy-ItNQ",
+        code: "hp8d",
+        night: false
+      },
+      {
+        month: 3,
+        day: 4,
+        subject: 1,
+        href: "https://pan.baidu.com/s/1ovQsWSWr_uBq1zEsArsjxA",
+        code: "ecrq",
+        night: false
+      },
+      {
+        month: 3,
+        day: 4,
+        subject: 2,
+        href: "https://pan.baidu.com/s/1eaoi297exZvRbUAnvkgEhw",
+        code: "qr18",
+        night: false
+      },
+      {
+        month: 3,
+        day: 4,
+        subject: 2,
+        href: "https://pan.baidu.com/s/1Lh84CVyXORnZw4d2_bqENA",
+        code: "ozdn",
+        night: true
+      },
+      {
+        month: 3,
+        day: 4,
+        subject: 3,
+        href: "https://pan.baidu.com/s/1lejfsrA32lYV8oasK9Jsdw",
+        code: "ttq9",
+        night: false
+      },
+      {
+        month: 3,
+        day: 4,
+        subject: 4,
+        href: "https://pan.baidu.com/s/1vAnxDAlC0p7r8Z_amGQ62A",
+        code: "swil",
+        night: false
+      },
+      {
+        month: 3,
+        day: 4,
+        subject: 5,
+        href: "https://pan.baidu.com/s/1NpGcSAFRveAFjzyqUYwACg",
+        code: "m189",
+        night: false
+      },
+      {
+        month: 3,
+        day: 5,
+        subject: 2,
+        href: "https://pan.baidu.com/s/1oAZo5HEHXkZz_EhvKskEaA",
+        code: "xjel",
+        night: false
+      },
+      {
+        month: 3,
+        day: 4,
+        subject: 3,
+        href: "https://pan.baidu.com/s/1HUTSeO72oYdlbYiNPt-r5w",
+        code: "1htm",
+        night: true
+      },
+      {
+        month: 3,
+        day: 4,
+        subject: 1,
+        href: "https://pan.baidu.com/s/1bqyIn-ktLX_jpQEeS606nw",
+        code: "fvsr",
+        night: false
+      },
+      {
+        month: 3,
+        day: 4,
+        subject: 5,
+        href: "https://pan.baidu.com/s/1fw532KaEBgRjKUAWQMek7A",
+        code: "t7p3",
+        night: false
+      },
+      {
+        month: 3,
+        day: 4,
+        subject: 0,
+        href: "https://pan.baidu.com/s/16Yh61Z9RJhAbQssYTnrtAA",
+        code: "yoxf",
+        night: false
+      }
+    ];
+
+    function changeCondition(item, value) {
+      condition[item] = value;
+      videoSelect();
+    }
+
 
     function draw() {
 
-      
+
       var d = new Date();
-      
+
       var day = d.getDate();
       var month = d.getMonth() + 1;
+
+
 
 
       for (var i = 3; i <= day; i++) {
@@ -319,8 +363,37 @@
         li.id = "date" + month + "-" + i;
         li.className = "date";
         li.innerHTML = month + ". " + i;
+        li.day = i;
         //将小li放在父容器中
         Element("dropdown-content-date").appendChild(li);
+        li.addEventListener("click", function () {
+          changeCondition("day", this.day);
+          Element("dropdown-date-title").innerHTML = this.day + "号";
+          videoSelect();
+        });
+
+      }
+      for (var j = 0; j < subject.length; j++) {
+        var li = document.createElement("li");
+        li.id = "subject" + j;
+        li.className = "subject";
+        li.innerHTML = subject[j];
+        li.subject = j;
+        //将小li放在父容器中
+        Element("dropdown-content-subject").appendChild(li);
+        li.addEventListener("click", function () {
+          changeCondition("subject", this.subject);
+          Element("dropdown-subject-title").innerHTML = subject[this.subject];
+          videoSelect();
+        });
+      }
+      for (var k = 0; k < subject.length; k++) {
+        var li = document.createElement("li");
+        li.className = "result";
+        li.innerHTML = "<h4>" + video[k].month + "." + video[k].day + "</h4><h5>" + subject[video[k].subject] + (video[k].night ? "<small>(晚课)</small>" : "") + "</h5><p><a href='" + video[k].href + "target='_blank' '>点击跳转</a><br />提取码：<strong>" + video[k].code + "</strong></p>";
+
+        //将小li放在父容器中
+        Element("result-content").appendChild(li);
 
       }
     }

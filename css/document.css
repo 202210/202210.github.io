@@ -1,6 +1,14 @@
 ﻿body {
 }
 
+* {
+    transition-delay:0.2s;
+}
+
+li {
+    list-style: none;
+}
+
 .download {
     margin: 15px;
     border: dotted 5px #efc10c;
@@ -15,14 +23,14 @@
 
 
 .li_three .ul_three, .li_two .ul_two {
-    transform: translate3d(0,0,1000px);
+    transform: scale(0,0);
     opacity: 0;
     height: 0;
     transition-duration: 0.3s;
 }
 
 .li_three:hover .ul_three, .li_two:hover .ul_two {
-    transform: translate3d(0,0,0);
+    transform: scale(1,1);
     height: 140px;
     opacity: 1;
 }
@@ -35,31 +43,51 @@
 }
 
 .dropdown {
+
 }
 
 .dropdown-btn {
     height: 50px;
-    width: 200px;
     padding: 15px;
-    display: inline-block;
+    display: inline;
     transition: 0.3s;
     background-color: #efeffd;
     border-radius: 25px 25px;
     box-shadow: #efe1ff -10px -10px 10px 10px inset;
+    padding:20px;
 }
 
+    .dropdown-btn:hover {
+        background-color: #efeffd;
+        box-shadow: #efe1ff 5px -5px 3px 5px inset;
+        height: 250px;
+        border-radius: 10px 10px;
+    }
     .dropdown-btn:hover i {
         transform: rotate(180deg);
     }
 
     .dropdown-btn ul {
-        transform: translate3d(0,0,1000px);
+        transition:0.3s;
+        transform: scale(0,0);
         height: 0px;
         opacity: 0;
     }
 
     .dropdown-btn:hover ul {
-        transform: translate3d(0,0);
+        transform:scale(1,1);
         height: 140px;
         opacity: 1;
     }
+.dropdown-content li {
+    margin-bottom:2px;
+    width: 100px;
+}
+.dropdown-content li:hover {
+    background-color: lightblue;
+}
+
+.result {
+    background-color: rgba(206, 217, 221, 1);
+    color:#455667;
+}
