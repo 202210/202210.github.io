@@ -1,8 +1,8 @@
 ﻿
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="utf-8">
 <head>
-  <meta charset="zh-cn" />
+  <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="description" content="">
@@ -25,6 +25,10 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+  <script src="js/document.js"></script>
+
+
 </head>
 
 <body>
@@ -85,7 +89,7 @@
         -->
         <div class="record-title">
           <h1>录播</h1>
-          <h4>有的效果不太好，没放里面或以括号标注</h4>
+          <h4>有的效果不太好，都放里了，先凑合看吧</h4>
           <small>flv格式，1小时900M左右</small>
           <span>
             <br />
@@ -102,14 +106,16 @@
           <div class="dropdown-btn col-lg-6 col-md-6 col-sm-6">
             <p><span id="dropdown-date-title">选择日期</span><i class="fa fa-chevron-down" aria-hidden="true"></i></p>
             <ul id="dropdown-content-date" class="dropdown-content">
-              <li onclick='delete condition.day; Element("dropdown-date-title").innerHTML = "所有日子"; videoSelect();'>所有日子</li>
+              <li onclick='changeCondition(true, "day", 0, "dropdown-date-title", "所有日子")'>所有日子</li>
             </ul>
+            <!-- delete condition.day; Element("dropdown-date-title").innerHTML = "所有日子"; videoSelect();
 
+     delete condition.subject; Element("dropdown-subject-title").innerHTML = "所有科目";videoSelect();-->
           </div>
           <div class="dropdown-btn col-lg-6 col-md-6 col-sm-6">
             <p><span id="dropdown-subject-title">选择科目</span><i class="fa fa-chevron-down" aria-hidden="true"></i></p>
             <ul id="dropdown-content-subject" class="dropdown-content">
-              <li  onclick='delete condition.subject; Element("dropdown-subject-title").innerHTML = "所有科目";videoSelect();'>所有科目</li>
+              <li  onclick='changeCondition(true, "subject", 0, "dropdown-subject-title", "所有科目");'>所有科目</li>
             </ul>
           </div>
         </div>
@@ -202,203 +208,7 @@
 
   <script src="js/basic.js"></script>
   <script language="javascript">
-    var condition = {
-
-    };
-
     
-    var subject = new Array("语文", "数学", "英语", "物理", "化学", "生物");
-
-    function videoSelect() {
-      //@param condition 过滤条件
-      //@param data 需要过滤的数据
-      const filter = (condition, data) => {
-        return data.filter(item => {
-          return Object.keys(condition).every(key => {
-            return String(item[key]).toLowerCase().includes(String(condition[key]).trim().toLowerCase())
-          })
-        })
-      }
-      // 假设选择的条件如下
-      let results = filter(condition, video);
-      Element("result-content").innerHTML = "";
-
-      for (var k = 0; k < results.length; k++) {
-        var li = document.createElement("li");
-        li.className = "result";
-        li.innerHTML = "<h4>" + results[k].month + "." + results[k].day + "</h4><h5>" + subject[results[k].subject] + (results[k].night ? "<small>(晚课)</small>" : "") + "</h5><p><a href='" + results[k].href + "target='_blank' '>点击跳转</a><br />提取码：<strong>" + results[k].code + "</strong></p>";
-
-        //将小li放在父容器中
-        Element("result-content").appendChild(li);
-
-      }
-    }
-
-    const video = [
-      {
-        month: 3,
-        day: 3,
-        subject: 4,
-        href: "https://pan.baidu.com/s/10zFTZdg89uA_Dbj-WeCuJQ",
-        code: "6ywz",
-        night: false
-      },
-      {
-        month: 3,
-        day: 3,
-        subject: 5,
-        href: "https://pan.baidu.com/s/1lKmLCteNFGKxmGWAy-ItNQ",
-        code: "hp8d",
-        night: false
-      },
-      {
-        month: 3,
-        day: 4,
-        subject: 1,
-        href: "https://pan.baidu.com/s/1ovQsWSWr_uBq1zEsArsjxA",
-        code: "ecrq",
-        night: false
-      },
-      {
-        month: 3,
-        day: 4,
-        subject: 2,
-        href: "https://pan.baidu.com/s/1eaoi297exZvRbUAnvkgEhw",
-        code: "qr18",
-        night: false
-      },
-      {
-        month: 3,
-        day: 4,
-        subject: 2,
-        href: "https://pan.baidu.com/s/1Lh84CVyXORnZw4d2_bqENA",
-        code: "ozdn",
-        night: true
-      },
-      {
-        month: 3,
-        day: 4,
-        subject: 3,
-        href: "https://pan.baidu.com/s/1lejfsrA32lYV8oasK9Jsdw",
-        code: "ttq9",
-        night: false
-      },
-      {
-        month: 3,
-        day: 4,
-        subject: 4,
-        href: "https://pan.baidu.com/s/1vAnxDAlC0p7r8Z_amGQ62A",
-        code: "swil",
-        night: false
-      },
-      {
-        month: 3,
-        day: 4,
-        subject: 5,
-        href: "https://pan.baidu.com/s/1NpGcSAFRveAFjzyqUYwACg",
-        code: "m189",
-        night: false
-      },
-      {
-        month: 3,
-        day: 5,
-        subject: 2,
-        href: "https://pan.baidu.com/s/1oAZo5HEHXkZz_EhvKskEaA",
-        code: "xjel",
-        night: false
-      },
-      {
-        month: 3,
-        day: 4,
-        subject: 3,
-        href: "https://pan.baidu.com/s/1HUTSeO72oYdlbYiNPt-r5w",
-        code: "1htm",
-        night: true
-      },
-      {
-        month: 3,
-        day: 4,
-        subject: 1,
-        href: "https://pan.baidu.com/s/1bqyIn-ktLX_jpQEeS606nw",
-        code: "fvsr",
-        night: false
-      },
-      {
-        month: 3,
-        day: 4,
-        subject: 5,
-        href: "https://pan.baidu.com/s/1fw532KaEBgRjKUAWQMek7A",
-        code: "t7p3",
-        night: false
-      },
-      {
-        month: 3,
-        day: 4,
-        subject: 0,
-        href: "https://pan.baidu.com/s/16Yh61Z9RJhAbQssYTnrtAA",
-        code: "yoxf",
-        night: false
-      }
-    ];
-
-    function changeCondition(item, value) {
-      condition[item] = value;
-      videoSelect();
-    }
-
-
-    function draw() {
-
-
-      var d = new Date();
-
-      var day = d.getDate();
-      var month = d.getMonth() + 1;
-
-
-
-
-      for (var i = 3; i <= day; i++) {
-        var li = document.createElement("li");
-        li.id = "date" + month + "-" + i;
-        li.className = "date";
-        li.innerHTML = month + ". " + i;
-        li.day = i;
-        //将小li放在父容器中
-        Element("dropdown-content-date").appendChild(li);
-        li.addEventListener("click", function () {
-          changeCondition("day", this.day);
-          Element("dropdown-date-title").innerHTML = this.day + "号";
-          videoSelect();
-        });
-
-      }
-      for (var j = 0; j < subject.length; j++) {
-        var li = document.createElement("li");
-        li.id = "subject" + j;
-        li.className = "subject";
-        li.innerHTML = subject[j];
-        li.subject = j;
-        //将小li放在父容器中
-        Element("dropdown-content-subject").appendChild(li);
-        li.addEventListener("click", function () {
-          changeCondition("subject", this.subject);
-          Element("dropdown-subject-title").innerHTML = subject[this.subject];
-          videoSelect();
-        });
-      }
-      for (var k = 0; k < subject.length; k++) {
-        var li = document.createElement("li");
-        li.className = "result";
-        li.innerHTML = "<h4>" + video[k].month + "." + video[k].day + "</h4><h5>" + subject[video[k].subject] + (video[k].night ? "<small>(晚课)</small>" : "") + "</h5><p><a href='" + video[k].href + "target='_blank' '>点击跳转</a><br />提取码：<strong>" + video[k].code + "</strong></p>";
-
-        //将小li放在父容器中
-        Element("result-content").appendChild(li);
-
-      }
-    }
-
-    draw();
   </script>
 
 

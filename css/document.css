@@ -1,9 +1,6 @@
 ﻿body {
 }
 
-* {
-    transition-delay:0.2s;
-}
 
 li {
     list-style: none;
@@ -27,6 +24,7 @@ li {
     opacity: 0;
     height: 0;
     transition-duration: 0.3s;
+    transition-delay: 0.2s;
 }
 
 .li_three:hover .ul_three, .li_two:hover .ul_two {
@@ -43,7 +41,9 @@ li {
 }
 
 .dropdown {
-
+    position:absolute;
+    margin-bottom: 10px;
+    z-index:100;
 }
 
 .dropdown-btn {
@@ -51,43 +51,82 @@ li {
     padding: 15px;
     display: inline;
     transition: 0.3s;
+    transition-delay: 0.2s;
     background-color: #efeffd;
     border-radius: 25px 25px;
     box-shadow: #efe1ff -10px -10px 10px 10px inset;
-    padding:20px;
+    padding: 20px;
 }
 
     .dropdown-btn:hover {
         background-color: #efeffd;
-        box-shadow: #efe1ff 5px -5px 3px 5px inset;
+        box-shadow: 0px 0px;
         height: 250px;
         border-radius: 10px 10px;
     }
-    .dropdown-btn:hover i {
-        transform: rotate(180deg);
-    }
+
+        .dropdown-btn:hover i {
+            transform: rotate(180deg);
+        }
 
     .dropdown-btn ul {
-        transition:0.3s;
+        transition: 0.3s;
+        transition-delay: 0.2s;
         transform: scale(0,0);
         height: 0px;
         opacity: 0;
     }
 
     .dropdown-btn:hover ul {
-        transform:scale(1,1);
+        transform: scale(1,1);
         height: 140px;
         opacity: 1;
     }
+
 .dropdown-content li {
-    margin-bottom:2px;
+    margin-bottom: 2px;
     width: 100px;
 }
-.dropdown-content li:hover {
-    background-color: lightblue;
-}
+
+    .dropdown-content li:hover {
+        background-color: lightblue;
+    }
 
 .result {
+    position: relative;
     background-color: rgba(206, 217, 221, 1);
-    color:#455667;
+    color: #455667;
+    padding: 10px;
+    top:80px;
+    z-index:10;
+    border-bottom:groove 3px white;
 }
+
+.result-date {
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    width: 18%;
+
+    right: 10%;
+    font-size: 4em;
+
+}
+
+    .result-date p {
+        position: center;
+    }
+
+.result-subject {
+    background-color: rgba(216, 217, 221, 1);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 50%;
+    color: rebeccapurple;
+    font-size: 3em;
+    text-align: center;
+}
+
+    .result-subject:hover {
+        background-color: rgba(186, 187, 191, 1);
+    }
