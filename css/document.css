@@ -3,6 +3,7 @@
 
 
 li {
+    outline-offset: 0;
     list-style: none;
 }
 
