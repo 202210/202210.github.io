@@ -27,7 +27,7 @@ function videoSelect() {
     let results = filter(condition, video);
     Element("result-content").innerHTML = "";
 
-    if (results == {}) {
+    if (results == 0) {
         Element("result-content").appendChild(li_Nothing);
     }
     else {
@@ -35,7 +35,7 @@ function videoSelect() {
         for (var k = 0; k < results.length; k++) {
             var li = document.createElement("li");
             li.className = "result";
-            li.innerHTML = "<div class='result-date'><p> " + results[k].month + "." + results[k].day + "</p></div><div class='result-subject' onclick=\"window.open('https://pan.baidu.com/s/" + results[k].href + "')\"><h5>" + subject[results[k].subject] + (results[k].night ? "<small>(晚课)</small>" : "") + "</h5></div><p>提取码：<strong>" + results[k].code + "</strong></p>";
+            li.innerHTML = "<div class='result-date'><p> " + results[k].month + "." + results[k].day + "</p></div><div class='result-subject' onclick='alert(\"提取码：" + results[k].code + "\");window.open(\"https://pan.baidu.com/s/" + results[k].href + "\");'><h5>" + subject[results[k].subject] + (results[k].night ? "<small>(晚课)</small>" : "") + "</h5></div><p>提取码：<strong>" + results[k].code + "</strong></p>";
             li.data = results[k];
             Element("result-content").appendChild(li);
         }
@@ -270,7 +270,7 @@ function draw() {
     for (var k = 0; k < video.length; k++) {
         var li = document.createElement("li");
         li.className = "result";
-        li.innerHTML = "<div class='result-date'><p> " + video[k].month + "." + video[k].day + "</p></div><div class='result-subject' onclick=\"window.open('https://pan.baidu.com/s/" + video[k].href + "')\"><h5>" + subject[video[k].subject] + (video[k].night ? "<small>(晚课)</small>" : "") + "</h5></div><p>提取码：<strong>" + video[k].code + "</strong></p>";
+        li.innerHTML = "<div class='result-date'><p> " + video[k].month + "." + video[k].day + "</p></div><div class='result-subject' onclick='alert(\"提取码：" + video[k].code + "\");window.open(\"https://pan.baidu.com/s/" + video[k].href + "\");'><h5>" + subject[video[k].subject] + (video[k].night ? "<small>(晚课)</small>" : "") + "</h5></div><p>提取码：<strong>" + video[k].code + "</strong></p>";
         li.data = video[k];
         Element("result-content").appendChild(li);
 

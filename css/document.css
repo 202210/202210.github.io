@@ -34,6 +34,11 @@ li {
 }
 
 
+
+.firstcol{
+    margin-bottom:70px;
+}
+
 .record-title {
     background-color: azure;
     box-shadow: #ddddde 5px 5px 10px 5px,#fffffd -50px -10px 0 10px inset;
@@ -42,20 +47,22 @@ li {
 
 .dropdown {
     position:absolute;
+    width:80%;
+    height:50px;
     margin-bottom: 10px;
     z-index:100;
 }
 
 .dropdown-btn {
-    height: 50px;
-    padding: 15px;
-    display: inline;
+    position: absolute;
+    height: 100%;
+    display: block;
     transition: 0.3s;
     transition-delay: 0.2s;
     background-color: #efeffd;
     border-radius: 25px 25px;
     box-shadow: #efe1ff -10px -10px 10px 10px inset;
-    padding: 20px;
+    padding:10px;
 }
 
     .dropdown-btn:hover {
@@ -82,6 +89,15 @@ li {
         height: 140px;
         opacity: 1;
     }
+
+.dropdown-btn-date {
+    left: 15%;
+    width: 30%;
+}
+.dropdown-btn-subject {
+    right: 15%;
+    width: 30%;
+}
 
 .dropdown-content li {
     margin-bottom: 2px;

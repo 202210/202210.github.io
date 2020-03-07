@@ -67,7 +67,7 @@
     </div>
     <div class="row">
       <!-- VCam教程开始 -->
-      <div class="col-sm-6 col-md-6 col-lg-6">
+      <div class="firstcol col-sm-6 col-md-6 col-lg-6">
         <!--
           <h2>虚拟摄像头是个啥：</h2>
           <p>就在电脑上再安一个摄像头，显示的是你设置的东西，包括照片 GIF 视频 实时屏幕等等，甚至加特效</p>
@@ -102,17 +102,14 @@
           </span>
         </div>
 
-        <div class="dropdown row">
-          <div class="dropdown-btn col-lg-6 col-md-6 col-sm-6">
+        <div class="dropdown">
+          <div class="dropdown-btn dropdown-btn-date">
             <p><span id="dropdown-date-title">选择日期</span><i class="fa fa-chevron-down" aria-hidden="true"></i></p>
             <ul id="dropdown-content-date" class="dropdown-content">
               <li onclick='changeCondition(true, "day", 0, "dropdown-date-title", "所有日子")'>所有日子</li>
             </ul>
-            <!-- delete condition.day; Element("dropdown-date-title").innerHTML = "所有日子"; videoSelect();
-
-     delete condition.subject; Element("dropdown-subject-title").innerHTML = "所有科目";videoSelect();-->
           </div>
-          <div class="dropdown-btn col-lg-6 col-md-6 col-sm-6">
+          <div class="dropdown-btn dropdown-btn-subject">
             <p><span id="dropdown-subject-title">选择科目</span><i class="fa fa-chevron-down" aria-hidden="true"></i></p>
             <ul id="dropdown-content-subject" class="dropdown-content">
               <li  onclick='changeCondition(true, "subject", 0, "dropdown-subject-title", "所有科目");'>所有科目</li>
