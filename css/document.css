@@ -113,6 +113,11 @@ li {
     width: 30%;
 }
 
+.dropdown-title {
+    text-align: center;
+}
+
+
 .dropdown-content li {
     margin-bottom: 2px;
     width: 100px;
@@ -136,7 +141,6 @@ li {
     position: absolute;
     top: 10%;
     bottom: 10%;
-    width: 18%;
     right: 10%;
     font-size: 4em;
 }

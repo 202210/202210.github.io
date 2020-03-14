@@ -1,13 +1,14 @@
 ﻿// JavaScript source code
 
 var condition = {};
-var subject = new Array("语文", "数学", "英语", "物理", "化学", "生物");
+var subject = new Array("语文", "数学", "英语", "物理", "化学", "生物", "**");
 // 0 语文
 // 1 数学
 // 2 英语
 // 3 物理
 // 4 化学
 // 5 生物
+// 6 语句
 
 var daydaydaydaydaydaydaydaydaydaydaydaydaydaydaydaydayday = -1;
 var subjectsubjectsubjectsubjectsubjectsubjectsubject = 0;
@@ -38,6 +39,7 @@ function videoSelect() {
             var li = document.createElement("li");
             li.className = "result";
             li.innerHTML = "<div class='result-date'><p> " + results[k].month + "." + results[k].day + "</p></div><div class='result-subject' onclick='alert(\"提取码：" + results[k].code + "\");window.open(\"https://pan.baidu.com/s/" + results[k].href + "\");'><h5>" + subject[results[k].subject] + (results[k].night ? "<small>(晚课)</small>" : "") + "</h5></div><p>提取码：<strong>" + results[k].code + "</strong></p>";
+            li.innerHTML += (results[k].note == "") ? "" : "<small>" + results[k].note + "</small>";
             li.data = results[k];
             Element("result-content").appendChild(li);
         }
@@ -52,6 +54,7 @@ const video = [
         subject: 4,
         href: "10zFTZdg89uA_Dbj-WeCuJQ",
         code: "6ywz",
+        note: "",
         night: false
     },
     {
@@ -60,6 +63,7 @@ const video = [
         subject: 5,
         href: "1lKmLCteNFGKxmGWAy-ItNQ",
         code: "hp8d",
+        note: "",
         night: false
     },
     {
@@ -68,6 +72,7 @@ const video = [
         subject: 1,
         href: "1ovQsWSWr_uBq1zEsArsjxA",
         code: "ecrq",
+        note: "",
         night: false
     },
     {
@@ -76,6 +81,7 @@ const video = [
         subject: 2,
         href: "1eaoi297exZvRbUAnvkgEhw",
         code: "qr18",
+        note: "",
         night: false
     },
     {
@@ -84,6 +90,7 @@ const video = [
         subject: 2,
         href: "1Lh84CVyXORnZw4d2_bqENA",
         code: "ozdn",
+        note: "",
         night: true
     },
     {
@@ -92,6 +99,7 @@ const video = [
         subject: 3,
         href: "1lejfsrA32lYV8oasK9Jsdw",
         code: "ttq9",
+        note: "",
         night: false
     },
     {
@@ -100,6 +108,7 @@ const video = [
         subject: 4,
         href: "1vAnxDAlC0p7r8Z_amGQ62A",
         code: "swil",
+        note: "",
         night: false
     },
     {
@@ -108,6 +117,7 @@ const video = [
         subject: 5,
         href: "1NpGcSAFRveAFjzyqUYwACg",
         code: "m189",
+        note: "",
         night: false
     },
     {
@@ -116,6 +126,7 @@ const video = [
         subject: 0,
         href: "16Yh61Z9RJhAbQssYTnrtAA",
         code: "yoxf",
+        note: "",
         night: false
     },
     {
@@ -124,6 +135,7 @@ const video = [
         subject: 1,
         href: "1bqyIn-ktLX_jpQEeS606nw",
         code: "fvsr",
+        note: "",
         night: false
     },
     {
@@ -132,6 +144,7 @@ const video = [
         subject: 2,
         href: "1oAZo5HEHXkZz_EhvKskEaA",
         code: "xjel",
+        note: "",
         night: false
     },
     {
@@ -140,6 +153,7 @@ const video = [
         subject: 3,
         href: "1HUTSeO72oYdlbYiNPt-r5w",
         code: "1htm",
+        note: "",
         night: true
     },
     {
@@ -148,6 +162,7 @@ const video = [
         subject: 5,
         href: "1fw532KaEBgRjKUAWQMek7A",
         code: "t7p3",
+        note: "",
         night: false
     },
     {
@@ -156,6 +171,7 @@ const video = [
         subject: 2,
         href: "155ti3498Jq4JuH6f-E82Mg",
         code: "wkds",
+        note: "",
         night: false
     },
     {
@@ -164,6 +180,7 @@ const video = [
         subject: 5,
         href: "1MU-iZwnfiR6aHb3wtKGEiQ",
         code: "tcjn",
+        note: "",
         night: false
     },
     {
@@ -172,6 +189,7 @@ const video = [
         subject: 1,
         href: "1qYn7a-L9NL2-iCS1o-_AAg",
         code: "zdmr",
+        note: "",
         night: false
     },
     {
@@ -180,6 +198,7 @@ const video = [
         subject: 2,
         href: "197WRAsRqCfe8Z18W8aCrtA",
         code: "8rma",
+        note: "",
         night: false
     },
     {
@@ -188,6 +207,7 @@ const video = [
         subject: 3,
         href: "1UH6XNvBxGm2bW9uHxf3qMw",
         code: "1ftd",
+        note: "",
         night: false
     },
     {
@@ -196,6 +216,7 @@ const video = [
         subject: 4,
         href: "1NZosfH2j6XDMmwSZ5TANLg",
         code: "6gqi",
+        note: "",
         night: false
     },
     {
@@ -204,6 +225,7 @@ const video = [
         subject: 5,
         href: "1232iPLPyfEBOcPV-lE-yiQ",
         code: "lyc7",
+        note: "",
         night: true
     },
     {
@@ -212,6 +234,7 @@ const video = [
         subject: 0,
         href: "1sDdaOOOqriX33Cn6jVo-Ig ",
         code: "5wq8",
+        note: "",
         night: false
     },
     {
@@ -220,6 +243,7 @@ const video = [
         subject: 1,
         href: "1Jr8I1IPRJA23fnuFgioXBw",
         code: "7p8k",
+        note: "",
         night: false
     },
     {
@@ -228,6 +252,7 @@ const video = [
         subject: 2,
         href: "1cWdk68BosoZjk3QVHJbVHA",
         code: "vgug",
+        note: "",
         night: false
     },
     {
@@ -236,6 +261,7 @@ const video = [
         subject: 3,
         href: "15OKQH6qfHnGtsPZd3htlww",
         code: "9zcu",
+        note: "",
         night: false
     },
     {
@@ -244,14 +270,16 @@ const video = [
         subject: 5,
         href: "1D3CoE_QVIPjdInbiDwDqCQ",
         code: "281g",
+        note: "",
         night: false
     },
     {
         month: 3,
         day: 10,
         subject: 1,
-        href: "1GPmNGXuGCzHc4gBfZjJS3g", 
+        href: "1GPmNGXuGCzHc4gBfZjJS3g",
         code: "00vc",
+        note: "",
         night: false
     },
     {
@@ -260,6 +288,7 @@ const video = [
         subject: 1,
         href: "17vnv-xnR3x_qZL8YPWtGTQ",
         code: "rbie",
+        note: "",
         night: true
     },
     {
@@ -268,7 +297,7 @@ const video = [
         subject: 2,
         href: "19bU8LD9FjpsisDK0wzxOpQ",
         code: "egpm",
-        night: false
+        note: "", night: false
     },
     {
         month: 3,
@@ -276,7 +305,7 @@ const video = [
         subject: 3,
         href: "1Xxtoyz81Xqe8BU8F5Cpp5Q",
         code: "h7t7",
-        night: false
+        note: "", night: false
     },
     {
         month: 3,
@@ -284,7 +313,7 @@ const video = [
         subject: 4,
         href: "1xOy9oi3WhiC6rflsQ4TL7w",
         code: "pk1m",
-        night: false
+        note: "", night: false
     },
     {
         month: 3,
@@ -292,15 +321,15 @@ const video = [
         subject: 5,
         href: "1KbrhV5_xB1l0N3McQlPJwA",
         code: "obf6",
-        night: false
+        note: "", night: false
     },
     {
         month: 3,
-        day: 11, 
+        day: 11,
         subject: 0,
         href: "1zxI_GYboAsahwGrGQZJsGg",
         code: "95ik",
-        night: false
+        note: "", night: false
     },
     {
         month: 3,
@@ -308,7 +337,7 @@ const video = [
         subject: 1,
         href: "1_QA8PGxZVK0EQzxwT4fsLw",
         code: "57db",
-        night: false
+        note: "", night: false
     },
     {
         month: 3,
@@ -316,7 +345,7 @@ const video = [
         subject: 2,
         href: "1Yj9tYx_QojpGCXh6-y_kOA ",
         code: "n1gd",
-        night: false
+        note: "", night: false
     },
     {
         month: 3,
@@ -324,15 +353,15 @@ const video = [
         subject: 2,
         href: "1Xc21u8gf8w_cWUyNvtM4Yw",
         code: "pb04",
-        night: true
+        note: "", night: true
     },
     {
         month: 3,
         day: 11,
-        subject: 4, 
+        subject: 4,
         href: "1Uar4Po6uL7cyZSDmZ7f2zw",
         code: "0hsl",
-        night: false
+        note: "", night: false
     },
     {
         month: 3,
@@ -340,7 +369,7 @@ const video = [
         subject: 5,
         href: "10TIMncZjrDShV_7rCdkgTw",
         code: "f2yq",
-        night: false
+        note: "", night: false
     },
     {
         month: 3,
@@ -348,7 +377,7 @@ const video = [
         subject: 0,
         href: "1rNUxmyuN1uYz7TeSbPa75w",
         code: "vcx9",
-        night: false
+        note: "", night: false
     },
     {
         month: 3,
@@ -356,7 +385,7 @@ const video = [
         subject: 3,
         href: "1DksxPMLDhwkg6mg1epxvcA",
         code: "npr4",
-        night: true
+        note: "", night: true
     },
     {
         month: 3,
@@ -364,7 +393,7 @@ const video = [
         subject: 4,
         href: "1S7YPO1cKSkQr2fHZMzKfbA",
         code: "xnff",
-        night: false
+        note: "", night: false
     },
     {
         month: 3,
@@ -372,8 +401,143 @@ const video = [
         subject: 5,
         href: "1zL3dJJnyq8lVdAI-cd7arA",
         code: "3gax",
+        note: "", night: false
+    },
+    {
+        month: 3,
+        day: 13,
+        subject: 0,
+        href: "1aHNOlwKx1RdX6I3p-KGFxQ",
+        code: "fqc7",
+        note: "",
         night: false
-    } 
+    },
+    {
+        month: 3,
+        day: 13,
+        subject: 3,
+        href: "1hOXCXW0i9ASEtw2l2Z6mUg",
+        code: "kgsg",
+        note: "",
+        night: false
+    },
+    {
+        month: 3,
+        day: 13,
+        subject: 4,
+        href: "1w9Fj91R1D-iSFUIkoGj0dA",
+        code: "rn9z",
+        note: "",
+        night: false
+    },
+    {
+        month: 3,
+        day: 13,
+        subject: 4,
+        href: "1cpv1CZ69qezVDfYjAq3V-g",
+        code: "rvpe",
+        note: "",
+        night: true
+    },
+    {
+        month: 3,
+        day: 13,
+        subject: 5,
+        href: "1U98g3VqPLMrVotrrjoHeYA",
+        code: "m4ad",
+        note: "",
+        night: false
+    },
+    {
+        month: 3,
+        day: 14,
+        subject: 0,
+        href: "1HaC_LFYlGIBPKFAMBBmaag",
+        code: "mo3m",
+        note: "",
+        night: false
+    },
+    {
+        month: 3,
+        day: 14,
+        subject: 1,
+        href: "1-Ky313rucBVo09wdzM7JzQ",
+        code: "gya5",
+        note: "",
+        night: false
+    },
+    {
+        month: 3,
+        day: 14,
+        subject: 2,
+        href: "1C73_L7wWsuSzkvKNkh6y1A",
+        code: "5ah4",
+        note: "",
+        night: false
+    },
+    {
+        month: 3,
+        day: 14,
+        subject: 3,
+        href: "1EYIXDvshZufCFZxW8nzGzA",
+        code: "34ur",
+        note: "",
+        night: false
+    },
+    {
+        month: 3,
+        day: 14,
+        subject: 4,
+        href: "1EyH3rtc8Sdqt-MQS8_QedA",
+        code: "pdda",
+        note: "",
+        night: false
+    },
+    {
+        month: 3,
+        day: 14,
+        subject: 5,
+        href: "1MWuF302X3G7UgFBovf3KAQ",
+        code: "nszk",
+        note: "",
+        night: false
+    },
+    {
+        month: 3,
+        day: 14,
+        subject: 5,
+        href: "1j8W6JuKimRwTSxgOl4arXA",
+        code: "qr98",
+        note: "",
+        night: true
+    },
+    {
+        month: 3,
+        day: 0,
+        subject: 6,
+        href: "1ajxlnFgNDsheDLnAkNkRGw",
+        code: "et5i",
+        note: "没事找抽型+泡他呢",
+        night: false
+    },
+    {
+        month: 3,
+        day: 0,
+        subject: 6,
+        href: "1uP9FBtxQoQlnA8oU4wp0Lg",
+        code: "9bl5",
+        note: "关上你的麦克",
+        night: false
+    },
+    {
+        month: 3,
+        day: 0,
+        subject: 6,
+        href: "1BVVoH9NgBuUruaIeb8Xdlg",
+        code: "hx2x",
+        note: "全文件夹",
+        night: false
+    }
     /*
      * 
      * 模板
@@ -384,7 +548,8 @@ const video = [
         subject: subjectsubjectsubjectsubjectsubjectsubjectsubject,
         href: "hrefhrefhrefhrefhrefhrefhrefhrefhrefhref",
         code: "codecodecodecodecodecodecodecodecodecode",
-        night: false 
+        note: "notenotenotenotenotenotenotenotenotenote",
+        night:false 
     }
     night 或是 true 
     */
