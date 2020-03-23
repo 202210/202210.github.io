@@ -5,6 +5,7 @@
     height: 0;
     transition-duration: 0.3s;
     transition-delay: 0.2s;
+
 }
 
 .role-default {
@@ -44,6 +45,7 @@
     position: relative;
     height: 200px;
     color: cornsilk;
+    margin-bottom: 40px;
 }
 
     .option .btn {
