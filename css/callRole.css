@@ -57,25 +57,25 @@
 
 .btnTurn {
     left: 1%;
-    width: 39%;
+    width: 49%;
     height: 100%;
-    font-size: 6em;
+    font-size: 5em;
 }
 
 .btnClear {
     right: 1%;
     bottom: 5%;
-    width: 34%;
+    width: 44%;
     height: 40%;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .btnRepeatSwitch {
     right: 1%;
     top: 5%;
-    width: 34%;
+    width: 44%;
     height: 40%;
-    font-size: 3em;
+    font-size: 2em;
 }
 /*
 .btnStart {
