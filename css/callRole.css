@@ -1,11 +1,19 @@
 
+.contain {
+    position: relative;
+}
+
+.contain-role {
+    position: absolute;
+    top:210px;
+    right: 3px;
+}
+
 .container-role-result {
     transform: scale(0,0);
     opacity: 0;
-    height: 0;
     transition-duration: 0.3s;
     transition-delay: 0.2s;
-
 }
 
 .role-default {
@@ -13,8 +21,8 @@
     height: 40px;
     padding-top: 10px;
     padding-bottom: 20px;
-    margin-left: 3px;
-    margin-right: 3px;
+    margin-left: 5px;
+    margin-right: 1px;
     margin-bottom: 7px;
     display: inline-block;
     text-align: center;
@@ -32,7 +40,7 @@
 .role-result {
     background-image: linear-gradient(to left, #f78da1 0%, #fb7490 19%, #fd8680 60%, #fe9a80 100%);
     top: 5%;
-    left: 5%;
+    left:5%;
     height: 90%;
     width: 90%;
     font-size: 10em;
@@ -51,7 +59,7 @@
     .option .btn {
         background: #accbee;
         position: absolute;
-        box-shadow:0 0 10px 1px #ddd, 0 0 3px 1px #fff inset;
+        box-shadow: 0 0 10px 1px #ddd, 0 0 3px 1px #fff inset;
         border-radius: 5px 7px;
     }
 
@@ -60,23 +68,46 @@
     width: 49%;
     height: 100%;
     font-size: 5em;
+    padding-top:50px;
 }
 
 .btnClear {
     right: 1%;
-    bottom: 5%;
+    top: 43%;
     width: 44%;
-    height: 40%;
+    height: 32%;
     font-size: 2em;
+    padding-top:9px;
 }
 
 .btnRepeatSwitch {
     right: 1%;
-    top: 5%;
+    top: 1%;
     width: 44%;
-    height: 40%;
+    height: 41%;
     font-size: 2em;
 }
+.btnProb {
+    background: #7e959e !important;
+    right: 1%;
+    top: 78%;
+    width: 44%;
+    height: 21%;
+    font-size: 10px;
+}
+
+
+
+.probPanel {
+    right: 1%;
+    top: 1%;
+    width: 44%;
+    height: 78%;
+
+    font-size: 6px;
+}
+
+
 /*
 .btnStart {
     /*background-color:RGBA(172, 149, 150, 0.9);*
@@ -100,15 +131,16 @@
 */
 
 .clearDone {
-    color:#5d5353;
+    color: #5d5353;
     background: #e5e4e4;
     position: fixed;
     right: -290px;
     top: 150px;
     height: 60px;
     width: 300px;
-    font-size:2em;
+    font-size: 2em;
     border-left: solid 10px rgba(131, 14, 226, 0.94);
     border-bottom: groove 3px rgba(131, 14, 226, 0.94);
     transition: 0.3s;
 }
+

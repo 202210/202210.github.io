@@ -37,6 +37,7 @@ var turnBool = true; // true：未开始状态
 
 
 
+
 function dataclear() {
 	selectedArr = deepClone(real);
 
@@ -49,12 +50,12 @@ function dataclear() {
 function repeatSwitch() {
 	repeat = !repeat;
 	if (repeat) {
-		Element("btnRepeatSwitch").innerHTML = "可重复(当前)";
+		Element("btnRepeatSwitch").innerHTML = "<p style='font-size: 16px;'>当前状态：</p>可重复";
 		Element("btnRepeatSwitch").style.background = "#accbee";
 		dataclear();
 	}
 	else {
-		Element("btnRepeatSwitch").innerHTML = "不重复(当前)";
+		Element("btnRepeatSwitch").innerHTML = "<p style='font-size: 16px;'>当前状态：</p>不可重复";
 		Element("btnRepeatSwitch").style.background = "#acb3ee";
 
 	}
@@ -68,6 +69,9 @@ function call() {
 	if (selected != -1) {
 		Element("role" + selected).className = 'role-default';
 	}
+	//分子
+	let probMoculer = Math.floor(Math.random() * 1000);
+	//概率为 probMoculer / 1000 + probMoculer/48000 - 1/48000
 	let num = Math.floor(Math.random() * ((repeat ? real : selectedArr).length));
 
 	selected = num;
@@ -140,4 +144,10 @@ function tabOnClick(tab, tabId) {
 
 window.onload = function(){
 	selectedArr = deepClone(real);
+}
+
+
+
+function prob() {
+	
 }

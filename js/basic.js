@@ -47,7 +47,6 @@ function deepClone(target) {
 }
 
 function available(object) {
-    object.style.transform = "scale(1, 1)";
-    object.style.height = "90%";
+    object.style.transform = "scale(1, 1) ";
     object.style.opacity = "1";
 }
