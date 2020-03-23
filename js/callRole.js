@@ -100,7 +100,6 @@ function pause() {
 	else {
 		draw(selectedArr);
 		Element("container-role-result").innerHTML = (selectedArr[selected]);
-		selectedArr.splice(selected, 1);
 	}
 	selectedArr.splice(selected, 1);
 
