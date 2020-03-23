@@ -1,54 +1,112 @@
-.role-default{
-  width:13%;
-  height:40px;
-  padding-top:10px;
-  padding-bottom:20px;
-  margin-left:3px;
-  margin-right:3px;
-  margin-bottom:7px;
-  display:inline-block;
-  text-align:center;
-  color:WhiteSmoke;
-  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
-  opacity:0.9;
-  border-radius:5px;
+
+.container-role-result {
+    transform: scale(0,0);
+    opacity: 0;
+    height: 0;
+    transition-duration: 0.3s;
+    transition-delay: 0.2s;
 }
 
-.role-selected{
-  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-  color:#efe;
+.role-default {
+    width: 13%;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 7px;
+    display: inline-block;
+    text-align: center;
+    color: WhiteSmoke;
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    opacity: 0.9;
+    border-radius: 5px;
 }
 
-.role-result{
-  background-image: linear-gradient(to left, #f78da1 0%, #fb7490 19%, #fd8680 60%, #fe9a80 100%);
-  top:5%;
-  left:5%;
-  height:90%;
-  width:90%;
-  font-size:10em;
-  transition: 0.5s;
+.role-selected {
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+    color: #efe;
 }
 
-
-.btnStart{
-  /*background-color:RGBA(172, 149, 150, 0.9);*/
-  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-  border:none;
-  left:0;
-  width:49%;
-  height:400px;
-  font-size:3em;
-}
-
-.btnPause{
-  /*background-color:RGBA(150, 149, 172, 0.9);*/
-  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
-  border:none;
-  right:0;
-  width:49%;
-  height:400px;
-  font-size:3em;
+.role-result {
+    background-image: linear-gradient(to left, #f78da1 0%, #fb7490 19%, #fd8680 60%, #fe9a80 100%);
+    top: 5%;
+    left: 5%;
+    height: 90%;
+    width: 90%;
+    font-size: 10em;
+    transition: 0.5s;
 }
 
 
 
+.option {
+    position: relative;
+    height: 200px;
+    color: cornsilk;
+}
+
+    .option .btn {
+        background: #accbee;
+        position: absolute;
+        box-shadow:0 0 10px 1px #ddd, 0 0 3px 1px #fff inset;
+        border-radius: 5px 7px;
+    }
+
+.btnTurn {
+    left: 1%;
+    width: 39%;
+    height: 100%;
+    font-size: 6em;
+}
+
+.btnClear {
+    right: 1%;
+    bottom: 5%;
+    width: 34%;
+    height: 40%;
+    font-size: 3em;
+}
+
+.btnRepeatSwitch {
+    right: 1%;
+    top: 5%;
+    width: 34%;
+    height: 40%;
+    font-size: 3em;
+}
+/*
+.btnStart {
+    /*background-color:RGBA(172, 149, 150, 0.9);*
+    background: #accbee;
+    position: absolute;
+    left: 1%;
+    width: 9%;
+    height: 100%;
+    font-size: 3em;
+}
+
+.btnPause {
+    /*background-color:RGBA(150, 149, 172, 0.9);*
+    background: #accbee;
+    position: absolute;
+    left: 11%;
+    width: 9%;
+    height: 100%;
+    font-size: 3em;
+}
+*/
+
+.clearDone {
+    color:#5d5353;
+    background: #e5e4e4;
+    position: fixed;
+    right: -290px;
+    top: 150px;
+    height: 60px;
+    width: 300px;
+    font-size:2em;
+    border-left: solid 10px rgba(131, 14, 226, 0.94);
+    border-bottom: groove 3px rgba(131, 14, 226, 0.94);
+    transition: 0.3s;
+}

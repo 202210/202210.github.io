@@ -1,4 +1,4 @@
-﻿// JavaScript source code
+// JavaScript source code
 
 var condition = {};
 var subject = new Array("语文", "数学", "英语", "物理", "化学", "生物", "**");
@@ -8,7 +8,7 @@ var subject = new Array("语文", "数学", "英语", "物理", "化学", "生�
 // 3 物理
 // 4 化学
 // 5 生物
-// 6 语句
+// 6 经典
 
 var daydaydaydaydaydaydaydaydaydaydaydaydaydaydaydaydayday = -1;
 var subjectsubjectsubjectsubjectsubjectsubjectsubject = 0;
@@ -572,6 +572,177 @@ const video = [
         href: "1FnJtxzdA_LDdDQUmNR3fTw",
         code: "3pj6",
         note: "自由组合定律题/应用", 
+        night: false
+    },
+    {
+        month: 3,
+        day: 17,
+        subject: 0,
+        href: "1PZD9t-8lP40A2zLDffv-aQ ",
+        code: "wn6h",
+        note: "谏太宗 讲完",
+        night: false
+    },
+    {
+        month: 3, 
+        day: 17,
+        subject: 1,
+        href: "1OLj6RG61STJTGpE5w1RNDQ",
+        code: "bep0",
+        note: "",
+        night: true
+    },
+    {
+        month: 3,
+        day: 17,
+        subject: 2,
+        href: "1F29hMjclJNVP355zCVEvxA",
+        code: "xrc2",
+        note: "",
+        night: false
+    },
+    {
+        month: 3, 
+        day: 17,
+        subject: 3,
+        href: "1HTSv1X24KcpOjAh3gX0BBg",
+        code: "71td",
+        note: "上半截",
+        night: false
+    },
+    {
+        month: 3,
+        day: 17,
+        subject: 3,
+        href: "1Js4gw8BnODMCVsxzAmX1OQ",
+        code: "y15k",
+        note: "下半截",
+        night: false
+    },
+    {
+        month: 3,
+        day: 17,
+        subject: 4,
+        href: "1srccsfO7kYnBCzB4B7wIGg",
+        code: "si1m",
+        note: "",
+        night: false
+    },
+    {
+        month: 3, 
+        day: 17,
+        subject: 5,
+        href: "19JjlZqyi_Mu9SpE4GWKBag",
+        code: "ksec",
+        note: "",
+        night: false
+    },
+    {
+        month: 3,
+        day: 18,
+        subject: 3,
+        href: "1n7_UyE1r3hq2Hunswm8dWA",
+        code: "g1yw",
+        note: "前半截 忘开声音了",
+        night: false
+    },
+    {
+        month: 3,
+        day: 18,
+        subject: 3,
+        href: "1znmzEuIrKMZXqdjyHwJebg",
+        code: "kjbl",
+        note: "后半截",
+        night: false
+    },
+    {
+        month: 3,
+        day: 18,
+        subject: 4,
+        href: "1Yof73dte_zP0qzFSzHcRNw",
+        code: "3g8l",
+        note: "",
+        night: false
+    }, 
+    {
+        month: 3,
+        day: 18,
+        subject: 5,
+        href: "1c-_OyDXzIYDkKdWBZVDmVw",
+        code: "3igq",
+        note: "",
+        night: false
+    }, 
+    {
+        month: 3,
+        day: 18,
+        subject: 0,
+        href: "1bsJ6eX9BtJAyJd-Tnb-s9w",
+        code: "kafh",
+        note: "谏太宗习题",
+        night: false
+    },
+    {
+        month: 3, 
+        day: 18,
+        subject: 1,
+        href: "1rOw3X2CKYXGr_LCP0gs61w",
+        code: "oah4",
+        note: "",
+        night: false
+    },
+    {
+        month: 3,
+        day: 19,
+        subject: 0,
+        href: "hrefhrefhrefhrefhrefhrefhrefhrefhrefhref",
+        code: "codecodecodecodecodecodecodecodecodecode",
+        note: "notenotenotenotenotenotenotenotenotenote",
+        night: false
+    },
+    {
+        month: 3,
+        day: daydaydaydaydaydaydaydaydaydaydaydaydaydaydaydaydayday,
+        subject: subjectsubjectsubjectsubjectsubjectsubjectsubject,
+        href: "hrefhrefhrefhrefhrefhrefhrefhrefhrefhref",
+        code: "codecodecodecodecodecodecodecodecodecode",
+        note: "notenotenotenotenotenotenotenotenotenote",
+        night: false
+    },
+    {
+        month: 3,
+        day: daydaydaydaydaydaydaydaydaydaydaydaydaydaydaydaydayday,
+        subject: subjectsubjectsubjectsubjectsubjectsubjectsubject,
+        href: "hrefhrefhrefhrefhrefhrefhrefhrefhrefhref",
+        code: "codecodecodecodecodecodecodecodecodecode",
+        note: "notenotenotenotenotenotenotenotenotenote",
+        night: false
+    },
+    {
+        month: 3, 
+        day: 19,
+        subject: 3,
+        href: "1SkWb8ljPoJ4ThMj7h24WQw",
+        code: "4clg",
+        note: "昨天作业",
+        night: false
+    },
+    {
+        month: 3,
+        day: 19,
+        subject: 4,
+        href: "18Ovd3n-n1nAzqOp1r87hAA",
+        code: "nuql",
+        note: "无机非金属材料",
+        night: false
+    },
+    {
+        month: 3,
+        day: 19,
+        subject: 5,
+        href: "1e7YWKZ4gVePxfEEOKbNikQ",
+        code: "dx5q",
+        note: "习题",
         night: false
     }
     {
