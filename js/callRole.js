@@ -12,6 +12,10 @@ var student = [
 	"白翔", "史佳瑞", "张翀齐"
 ];
 
+var probChanged = [];
+
+
+
 var teacher = [
 	"语文", "数学", "英语", "物理", "化学", "生物"
 ];
@@ -69,14 +73,42 @@ function call() {
 	if (selected != -1) {
 		Element("role" + selected).className = 'role-default';
 	}
-	//分子
-	let probMoculer = Math.floor(Math.random() * 1000);
-	//概率为 probMoculer / 1000 + probMoculer/48000 - 1/48000
-	let num = Math.floor(Math.random() * ((repeat ? real : selectedArr).length));
+	// 分子
+	let probRandom = Math.floor(Math.random() * 1000);
+	// 概率为 prob / 1000 + prob / 48000 - 1/48000
+	// =(49prob + 1) / 48000 = 1 / x  
+	// =>
+	// x = 48000 / (49prob + 1)
+	// prob = (48000 / x  - 1) / 49
 
-	selected = num;
-
-	Element("role" + num).className = 'role-selected role-default';
+	var setted = [
+		{
+			order: 31, // order不是学号
+			prob: 20.387755 // x = 48 ,prob = 20.387755
+		}
+/*		,
+		{
+			order: 1, // order不是学号
+			prob: 20.387755 // x = 48 ,prob = 20.387755
+		}
+*/
+	]
+//	probChanged = setted;
+	let last =  Math.floor(Math.random() * ((repeat ? real : selectedArr).length));
+	for (let i = 0; i < probChanged.length; i++) {
+		last = probRandom <= probChanged[i].prob ? probChanged[i].order : last;
+	}
+	selected = last;
+	/*
+	if (probRandom <= setted[0].prob) {
+		selected = setted[0].order;
+	}
+	else {
+		let num = Math.floor(Math.random() * ((repeat ? real : selectedArr).length));
+		selected = num;
+	}
+	*/
+	Element("role" + selected).className = 'role-selected role-default';
 }
 
 function Turn() {
@@ -146,8 +178,21 @@ window.onload = function(){
 	selectedArr = deepClone(real);
 }
 
-
+var probPanelBool = false
 
 function prob() {
+
+	probPanelBool ? unavailable(Element("probPanal")) : available(Element("probPanal"));
+	probPanelBool = !probPanelBool;
 	
+}
+function probSubmit() {
+//	probChanged.push({
+//		order: Element("order" + i).value,
+//		prob: Element("prob" + i).value
+//	});
+	probChanged[0] = {
+		order: Element("order1").value-1,
+		prob: (48000 / Element("prob1").value - 1) / 49
+	}
 }

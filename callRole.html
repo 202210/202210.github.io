@@ -74,18 +74,54 @@
     <div class="option">
 
 
-      <div id="btnTurn" class="btnTurn btn" onclick="Turn();">开始</div>
+      <div id="btnTurn" class="btnTurn mbtn btn" onclick="Turn();">开始</div>
       <!--
-  <div id="btnStart" class="btnStart" onclick="start();">开始（原）</div>
-  <div id="btnPause" class="btnPause" onclick="pause();">停！（原）</div>
-  -->
-      <div id="btnRepeatSwitch" class="btnRepeatSwitch btn" onclick="repeatSwitch();"><p style="font-size:16px;">当前状态：</p>可重复</div>
-      <div id="btnClear" class="btnClear btn" onclick="dataclear();">重置名单</div>
-      <div id="btnProb" class="btnProb btn" onclick="prob();">测试：更改概率<br/>(不可用)</div>
-      <div id="proPanal" class="probPanel panel" style="display:none;">
-        <div>将学号<input type="text" />的概率更改为<input type="text" />分之一</div>
-      </div>
-    </div>
+      <div id="btnStart" class="btnStart" onclick="start();">开始（原）</div>
+      <div id="btnPause" class="btnPause" onclick="pause();">停！（原）</div>
+      -->
+      <div id="btnRepeatSwitch" class="btnRepeatSwitch mbtn btn" onclick="repeatSwitch();"><p style="font-size:16px;">当前状态：</p>可重复</div>
+      <div id="btnClear" class="btnClear mbtn btn" onclick="dataclear();">重置名单</div>
+      <div id="btnProb" class="btnProb mbtn btn" onclick="prob();">测试：更改概率<br />(不可用)</div>
+      <div id="probPanal" class="probPanel mpanel">
+        <div class="input-group input-group-sm">
+          <div class="prob-group">
+            <span class="input-group-addon">1.</span>
+            <input id="order1" type="text" class="form-control" placeholder="学号" aria-describedby="basic-addon1">
+            <span class="input-group-addon">号概率：</span>
+            <span class="input-group-addon">1/</span>
+            <input id="prob1" type="text" class="form-control" placeholder="分母" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="btn-group" role="group" aria-label="工具条">
+          <button type="button" class="btn btn-default" onclick="probSubmit();">
+
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            <span class="sr-only">保存更改</span>
+          </button>
+        <!--
+          <button type="button" class="btn btn-default">
+
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            <span class="sr-only">增加一项</span>
+          </button>
+          <button type="button" class="btn btn-default">
+
+            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+            <span class="sr-only">减少此项</span>
+          </button>
+          -->
+        </div><!-- /.工具条-->
+        <div class="explanation">
+          暂只可以把一个设掉，原理就是产生随机数p,p∈[0,1000]，
+          如果随机数小于某个值p，则结果为被设定的人，如果不小于，就是真正的随机的（支持多个人），
+          也就是说，被设定的的人除了原来的千分之某个值prob，再加上四十八分之一
+          这里的某个值p就是通过输入进去的数x，反过来算出得到的，
+          算式为 prob / 1000 + prob / 48000 - 1/48000，得出prob = (48000 / x  - 1) / 49
+          这个式子说白了，就是一个用字母表示另外一个字母
+          结论：1. 输入特大的数(应该是大于40000或是以下)没用。2. 1000这个数很大(和结论一无关)，弥补了除法得数不精的问题
+        </div>
+          </div><!-- /.panel -->
+      </div><!-- /.option -->
     <div class="container-role">
       <div class="row container-role-result role-selected role-result role-default" id="container-role-result">
       </div>
