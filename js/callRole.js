@@ -98,9 +98,10 @@ function call() {
 */
 	]
 //	probChanged = setted;
-	let last =  Math.floor(Math.random() * ((repeat ? real : selectedArr).length));
+	let last = Math.floor(Math.random() * ((repeat ? real : selectedArr).length));
 	for (let i = 0; i < probChanged.length; i++) {
-		last = probRandom <= probChanged[i].prob ? probChanged[i].order : last;
+		if (probChanged[0].prob != null && probChanged[0].order >= 0)
+			last = probRandom <= probChanged[i].prob ? probChanged[i].order : last;
 	}
 	selected = last;
 	Element("role" + selected).className = 'role-selected role-default';

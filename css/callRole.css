@@ -2,6 +2,7 @@ body {
     overflow: scroll;
     overflow-x: hidden;
 }
+
 .contain {
     position: relative;
 }
@@ -9,8 +10,7 @@ body {
 
 .option-container {
     position: absolute;
-    width:100%;
-
+    width: 100%;
 }
 
 .option {
@@ -107,7 +107,7 @@ body {
 .container-role-container {
     position: absolute;
     top: 210px;
-    width:100%;
+    width: 100%;
 }
 
 .contain-role {
@@ -130,6 +130,8 @@ body {
     transition-delay: 0.2s;
 }
 
+
+
 .container-role-left {
     position: absolute;
     left: 2%;
@@ -138,8 +140,8 @@ body {
 }
 
 .role-default {
-    width: 11%;
-    height: 40px;   
+    width: 13%;
+    height: 40px;
     padding-top: 10px;
     padding-bottom: 20px;
     margin-left: 1%;
@@ -184,4 +186,107 @@ body {
     right: 10px;
     bottom: 10px;
     width: 50%;
+}
+
+@media screen and (max-width: 500px) {
+    .container-role-result {
+        padding-top: 10px;
+        height: 120px;
+        font-size: 5em;
+    }
+
+    .role-default {
+        width: 23%;
+    }
+
+    .option {
+        height: 300px;
+        color: cornsilk;
+        margin-bottom: 40px;
+    }
+
+    .btnTurn {
+        height: 79%;
+        font-size: 3em;
+        padding-top: 80px;
+    }
+
+    .btnClear {
+        right: 1%;
+        top: 50%;
+        width: 46%;
+        height: 29%;
+        padding-top:25px;
+        font-size: 24px;
+    }
+
+    .btnRepeatSwitch {
+        right: 1%;
+        top: 1%;
+        width: 46%;
+        height: 48%;
+        padding-top: 23px;
+        font-size: 32px;
+    }
+
+    .btnProb {
+        background: #7e959e !important;
+        right: 1%;
+        top: 86%;
+        width: 98%;
+        height: 13%;
+        font-size: 10px;
+    }
+
+    .probPanel {
+        width: 96%;
+        height: 87%;
+        font-size: 12px;
+    }
+
+    .container-role-container {
+        top: 310px;
+    }
+
+    .role-down {
+        top: 130px;
+    }
+
+    .explanation {display:none}
+}
+
+@media screen and (max-width: 350px) {
+
+    .btnRepeatSwitch {
+        font-size: 19px;
+    }
+    .container-role-result {
+        padding-top: 11px;
+        height: 80px;
+        font-size: 39px;
+    }
+
+    .container-role-container {
+        position: absolute;
+        top: 310px;
+        width: 100%;
+    }
+
+    .role-default {
+        width: 32%;
+    }
+
+    .role-down {
+        top: 90px;
+    }
+}
+
+@media screen and (max-width: 170px) {
+    body * {
+        display: none;
+    }
+
+    body::after {
+        content: "What do you want to do with such a small screen :-)";
+    }
 }
