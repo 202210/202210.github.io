@@ -1,53 +1,17 @@
-
+body {
+    overflow: scroll;
+    overflow-x: hidden;
+}
 .contain {
     position: relative;
 }
 
-.contain-role {
+
+.option-container {
     position: absolute;
-    top:210px;
-    left: 3px;
+    width:100%;
+
 }
-
-.container-role-result {
-    transform: scale(0,0);
-    opacity: 0;
-    transition-duration: 0.3s;
-    transition-delay: 0.2s;
-}
-
-.role-default {
-    width: 13%;
-    height: 40px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    margin-left: 5px;
-    margin-right: 1px;
-    margin-bottom: 7px;
-    display: inline-block;
-    text-align: center;
-    color: WhiteSmoke;
-    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
-    opacity: 0.9;
-    border-radius: 5px;
-}
-
-.role-selected {
-    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-    color: #efe;
-}
-
-.role-result {
-    background-image: linear-gradient(to left, #f78da1 0%, #fb7490 19%, #fd8680 60%, #fe9a80 100%);
-    top: 5%;
-    left:5%;
-    height: 90%;
-    width: 90%;
-    font-size: 10em;
-    transition: 0.5s;
-}
-
-
 
 .option {
     position: relative;
@@ -68,7 +32,7 @@
     width: 49%;
     height: 100%;
     font-size: 5em;
-    padding-top:50px;
+    padding-top: 50px;
 }
 
 .btnClear {
@@ -77,7 +41,7 @@
     width: 44%;
     height: 32%;
     font-size: 2em;
-    padding-top:9px;
+    padding-top: 9px;
 }
 
 .btnRepeatSwitch {
@@ -87,6 +51,7 @@
     height: 41%;
     font-size: 2em;
 }
+
 .btnProb {
     background: #7e959e !important;
     right: 1%;
@@ -106,8 +71,7 @@
     width: 44%;
     height: 80%;
     font-size: 12px;
-    z-index:1;
-
+    z-index: 1;
     transform: translateY(50%) scale(1,0);
     opacity: 0;
     transition-duration: 0.2s;
@@ -140,6 +104,67 @@
 }
 */
 
+.container-role-container {
+    position: absolute;
+    top: 210px;
+    width:100%;
+}
+
+.contain-role {
+    position: relative;
+}
+
+.container-role-result {
+    position: absolute;
+    background-image: linear-gradient(to left, #f78da1 0%, #fb7490 19%, #fd8680 60%, #fe9a80 100%);
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 210px;
+    text-align: center;
+    border-radius: 3px 4px;
+    font-size: 10em;
+    transform: scale(0,0);
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-delay: 0.2s;
+}
+
+.container-role-left {
+    position: absolute;
+    left: 2%;
+    width: 96%;
+    transition-duration: 0.3s;
+}
+
+.role-default {
+    width: 11%;
+    height: 40px;   
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-left: 1%;
+    margin-bottom: 7px;
+    display: inline-block;
+    text-align: center;
+    color: WhiteSmoke;
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    opacity: 0.9;
+    border-radius: 5px;
+}
+
+.role-selected {
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+    color: #efe;
+}
+
+.role-up {
+    top: 0px;
+}
+
+.role-down {
+    top: 220px;
+}
+
 .clearDone {
     color: #5d5353;
     background: #e5e4e4;
@@ -153,9 +178,10 @@
     border-bottom: groove 3px rgba(131, 14, 226, 0.94);
     transition: 0.3s;
 }
-.explanation{
-    position:absolute;
-    right:10px;
-    bottom:10px;
-    width:50%;
+
+.explanation {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 50%;
 }

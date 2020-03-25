@@ -24,7 +24,9 @@ var number = [
 	"1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
 	"11", "12", "13", "14", "15", "16", "17", "18", "19", "20",
 	"21", "22", "23", "24", "25", "26", "27", "28", "29", "30",
-	"31", "32", "33", "34", "35", "36", "37", "38", "39", "40"
+	"31", "32", "33", "34", "35", "36", "37", "38", "39", "40",
+	"41", "42", "43", "44", "45", "46", "47", "48", "49", "50",
+	"51", "52", "53", "54", "55", "56", "56", "58", "59", "60"
 ];
 
 
@@ -49,6 +51,8 @@ function dataclear() {
 	Element("clearDone").style.right = "-10px";
 	setTimeout("Element('clearDone').style.right = '-290px'", 600);
 
+	Element("container-role-left").className = "container-role-left role-up";
+	unavailable(Element("container-role-result"));
 }
 
 function repeatSwitch() {
@@ -99,15 +103,6 @@ function call() {
 		last = probRandom <= probChanged[i].prob ? probChanged[i].order : last;
 	}
 	selected = last;
-	/*
-	if (probRandom <= setted[0].prob) {
-		selected = setted[0].order;
-	}
-	else {
-		let num = Math.floor(Math.random() * ((repeat ? real : selectedArr).length));
-		selected = num;
-	}
-	*/
 	Element("role" + selected).className = 'role-selected role-default';
 }
 
@@ -118,31 +113,39 @@ function Turn() {
 function start() {
 	time = setInterval("call()", 100);
 	Element("btnClear").disabled = "disabled";
-//	Element("btnStart").disabled = "disabled";
-//	Element("btnPause").removeAttribute("disabled");
 
 	turnBool = false;
 	Element("btnTurn").innerHTML = "停";
 }
 function pause() {
+	let selectedName;
+	//  停止抽
 	clearInterval(time);
-
-
+	//  结果可见
 	available(Element("container-role-result"));
+	Element("container-role-left").className = "container-role-left role-down";
+	//  显示，分重复与不重复
 	if (repeat) {
+		selectedName = real[selected];
 		draw(real);
-		Element("container-role-result").innerHTML = (real[selected]);
+		Element("container-role-result").innerHTML = (selectedName);
+
+
 	}
 	else {
+		selectedName = selectedArr[selected]
 		draw(selectedArr);
-		Element("container-role-result").innerHTML = (selectedArr[selected]);
+		Element("container-role-result").innerHTML = (selectedName);
 	}
-	selectedArr.splice(selected, 1);
-
-//	Element("btnPause").disabled = "disabled";
-//	Element("btnStart").removeAttribute("disabled");
+	//  删除被抽中的项
+	selectedArr.forEach(function (item,index,arr) {
+		if (item == selectedName) {
+			arr.splice(index, 1);
+		}
+	});
+	//  清空开关
 	Element("btnClear").removeAttribute("disabled");
-
+	//  开始/停开关
 	turnBool = true;
 	Element("btnTurn").innerHTML = "开始";
 }
@@ -151,7 +154,6 @@ function pause() {
 function draw(toDraw) {
 
 	Element("container-role-left").innerHTML = "";
-//	if (Element("btnStart").disabled == "disabled" && Element("btnStart").removeAttribute("disabled"));
 	clearInterval(time);
 
 	for (let i = 0; i < toDraw.length; i++) {
@@ -167,11 +169,14 @@ function draw(toDraw) {
 draw(real);
 
 function tabOnClick(tab, tabId) {
-	Element(tabId).className = "active";
+
+	clearInterval(time);
 	real = tab;
 	selectedArr = deepClone(real);
 	draw(real);
 	selected = -1;
+	Element("container-role-left").className = "container-role-left role-up";
+	unavailable(Element("container-role-result"));
 }
 
 window.onload = function(){

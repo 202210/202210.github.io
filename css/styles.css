@@ -90,14 +90,14 @@ body:before{
 }
 
 .bottom{
-    position:absolute;
+    position:fixed;
     bottom:0px;
     left:0px;
     right:0px;
-
+    font-size:4px;
   background-color:#54c;
   color:#cbf;
-  opacity:0.97;
+  opacity:0.9;
   
 }
 
