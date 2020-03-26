@@ -87,12 +87,12 @@ function call() {
 	var setted = [
 		{
 			order: 0, // order不是学号
-			prob: 20.387755 // x = 48 ,prob = 20.387755
+			prob: 0 // x = 48 ,prob = 0
 		}
 /*		,
 		{
 			order: 0, // order不是学号
-			prob: 20.387755 // x = 48 ,prob = 20.387755
+			prob: 0 // x = 48 ,prob = 0
 		}
 */
 	]
