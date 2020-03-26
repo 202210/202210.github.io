@@ -79,20 +79,19 @@ function call() {
 	}
 	// 分子
 	let probRandom = Math.floor(Math.random() * 1000);
-	// 概率为 prob / 1000 + prob / 48000 - 1/48000
-	// =(49prob + 1) / 48000 = 1 / x  
-	// =>
-	// x = 48000 / (49prob + 1)
-	// prob = (48000 / x  - 1) / 49
+	// 设一个数prob，生成的probRandom小于这个数则选定这个人
+	// 则概率x为 prob / 1000 + (1000 - prob) / (1000 * 48)
+	// x = 48000 / (47prob + 1000)
+	// prob = (48000 / x  - 1000) / 47
 
 	var setted = [
 		{
-			order: 31, // order不是学号
+			order: 0, // order不是学号
 			prob: 20.387755 // x = 48 ,prob = 20.387755
 		}
 /*		,
 		{
-			order: 1, // order不是学号
+			order: 0, // order不是学号
 			prob: 20.387755 // x = 48 ,prob = 20.387755
 		}
 */
@@ -199,6 +198,6 @@ function probSubmit() {
 //	});
 	probChanged[0] = {
 		order: Element("order1").value-1,
-		prob: (48000 / Element("prob1").value - 1) / 49
+		prob: (48000 / Element("prob1").value - 1000) / 47
 	}
 }
