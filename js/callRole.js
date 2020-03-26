@@ -196,25 +196,25 @@ function prob() {
 }
 
 function probSubmit() {
-	var probSum = 0;
-	let xSum = 0;
-	probChanged.forEach(function (value) {
-		if (value.prob) {
-
-			xSum += value.prob;
-		}
-	});
-	if (xSum <= 1000) {
-		for (let i = 0; i < probItem; i++) {
+	let probSum = 0;
+	let lastprobChanged = deepClone(probChanged);
+	let lastprobSum = 0;
+	for (let i = 0; i < probItem; i++) {
+		var orderi = Element("order" + i)
+		var probi = Element("prob" + i)
+		if (orderi != null && probi != null) {
 			probChanged[i] = {
-				order: Element("order" + i).value - 1,
-				prob: (48000 / (Element("prob" + i).value) - 1000) / 47 + probSum
+				order: orderi.value - 1,
+				prob: (48000 / probi.value - 1000) / 47 + probSum
 			}
+			lastprobSum = probSum;
 			probSum += probChanged[i].prob
 		}
+	}
 
-		probChanged.reverse(probChanged);
+	probChanged.reverse(probChanged);
 
+	if (lastprobSum <= 1000) {
 		Element("popTip").innerHTML = "提交成功";
 
 		Element("popTip").style.right = "-10px";
@@ -222,7 +222,7 @@ function probSubmit() {
 
 	}
 	else {
-
+		probChanged = deepClone(lastprobChanged);
 		Element("popTip").innerHTML = "概率比1大 泡人呢";
 
 		Element("popTip").style.right = "-10px";
