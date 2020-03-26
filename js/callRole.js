@@ -181,6 +181,7 @@ function tabOnClick(tab, tabId) {
 
 window.onload = function(){
 	selectedArr = deepClone(real);
+	dataclear();
 }
 
 var probPanelBool = false
