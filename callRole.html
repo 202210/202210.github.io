@@ -80,17 +80,14 @@
         <div id="btnStart" class="btnStart" onclick="start();">开始（原）</div>
         <div id="btnPause" class="btnPause" onclick="pause();">停！（原）</div>
         -->
-        <div id="btnRepeatSwitch" class="btnRepeatSwitch mbtn btn" onclick="repeatSwitch();"><p style="font-size:16px;">当前状态：</p>可重复</div>
+        <div id="btnRepeatSwitch" class="btnRepeatSwitch mbtn btn" onclick="repeatSwitch();"><p style="font-size:16px;">当前状态：</p> <br />可重复</div>
         <div id="btnClear" class="btnClear mbtn btn" onclick="dataclear();">重置名单</div>
         <div id="btnProb" class="btnProb mbtn btn" onclick="prob();">测试：更改概率<br />(请在可重复状态下使用)</div>
         <div id="probPanal" class="probPanel mpanel">
-          <div class="input-group input-group-sm">
+          <div class="input-group input-group-sm" id="probInputGroup">
             <div class="prob-group">
-              <span class="input-group-addon">1.</span>
-              <input id="order1" type="text" class="form-control" placeholder="学号" aria-describedby="basic-addon1">
-              <span class="input-group-addon">号概率：</span>
-              <span class="input-group-addon">1/</span>
-              <input id="prob1" type="text" class="form-control" placeholder="分母" aria-describedby="basic-addon1">
+              <input id="order0" type="text"  placeholder="填学号" aria-describedby="序数">
+              <input id="prob0" type="text" placeholder="填概率的倒数" aria-describedby="分母">
             </div>
           </div>
           <div class="btn-group" role="group" aria-label="工具条">
@@ -99,18 +96,17 @@
               <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
               <span class="sr-only">保存更改</span>
             </button>
-            <!--
-            <button type="button" class="btn btn-default">
+            
+            <button type="button" class="btn btn-default" onclick="probItemAdd();">
 
               <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
               <span class="sr-only">增加一项</span>
             </button>
-            <button type="button" class="btn btn-default">
+            <button type="button" class="btn btn-default" onclick="probItemRemove();">
 
               <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
               <span class="sr-only">减少此项</span>
             </button>
-            -->
           </div><!-- /.工具条-->
           <div class="explanation">
             // 设一个数prob，生成的probRandom小于这个数则选定这个人<br />
@@ -134,7 +130,7 @@
 
   </div><!-- /.contain -->
 
-  <div id="clearDone" class="clearDone">
+  <div id="popTip" class="pop-Tip">
     已重置名单
   </div>
 

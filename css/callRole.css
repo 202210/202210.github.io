@@ -3,6 +3,24 @@ body {
     overflow-x: hidden;
 }
 
+p, input{
+    display:inline-block;
+}
+
+input {
+    width: 90px;
+    background: rgba(39, 92, 113, 0.95);
+    outline-style: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+    input:focus {
+        border-color: #66afe9;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+    }
+
 .contain {
     position: relative;
 }
@@ -82,6 +100,11 @@ body {
     box-shadow: 0 0 10px 1px #ddd;
 }
 
+.prob-group {
+    width: 20%;
+    display: inline-block;
+    height: 50%;
+}
 /*
 .btnStart {
     /*background-color:RGBA(172, 149, 150, 0.9);*
@@ -103,7 +126,6 @@ body {
     font-size: 3em;
 }
 */
-
 .container-role-container {
     position: absolute;
     top: 210px;
@@ -167,7 +189,7 @@ body {
     top: 220px;
 }
 
-.clearDone {
+.pop-Tip {
     color: #5d5353;
     background: #e5e4e4;
     position: fixed;
@@ -175,7 +197,10 @@ body {
     top: 150px;
     height: 60px;
     width: 300px;
-    font-size: 2em;
+    padding-left:29px;
+    padding-top: 12px;
+    font-size: 22px;
+    z-index: 100;
     border-left: solid 10px rgba(131, 14, 226, 0.94);
     border-bottom: groove 3px rgba(131, 14, 226, 0.94);
     transition: 0.3s;
@@ -216,7 +241,7 @@ body {
         top: 50%;
         width: 46%;
         height: 29%;
-        padding-top:25px;
+        padding-top: 25px;
         font-size: 24px;
     }
 
@@ -252,7 +277,9 @@ body {
         top: 130px;
     }
 
-    .explanation {display:none}
+    .explanation {
+        display: none
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -260,6 +287,7 @@ body {
     .btnRepeatSwitch {
         font-size: 19px;
     }
+
     .container-role-result {
         padding-top: 11px;
         height: 80px;

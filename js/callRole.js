@@ -47,9 +47,10 @@ var turnBool = true; // true：未开始状态
 function dataclear() {
 	selectedArr = deepClone(real);
 
-	draw(repeat ? real : selectedArr);
-	Element("clearDone").style.right = "-10px";
-	setTimeout("Element('clearDone').style.right = '-290px'", 600);
+	Element("popTip").innerHTML = "已重置名单";
+
+	Element("popTip").style.right = "-10px";
+	setTimeout("Element('popTip').style.right = '-290px'", 600);
 
 	Element("container-role-left").className = "container-role-left role-up";
 	unavailable(Element("container-role-result"));
@@ -58,12 +59,12 @@ function dataclear() {
 function repeatSwitch() {
 	repeat = !repeat;
 	if (repeat) {
-		Element("btnRepeatSwitch").innerHTML = "<p style='font-size: 16px;'>当前状态：</p>可重复";
+		Element("btnRepeatSwitch").innerHTML = "<p style='font-size: 16px;'>当前状态：</p> <br />可重复";
 		Element("btnRepeatSwitch").style.background = "#accbee";
 		dataclear();
 	}
 	else {
-		Element("btnRepeatSwitch").innerHTML = "<p style='font-size: 16px;'>当前状态：</p>不可重复";
+		Element("btnRepeatSwitch").innerHTML = "<p style='font-size: 16px;'>当前状态：</p> <br />不可重复";
 		Element("btnRepeatSwitch").style.background = "#acb3ee";
 
 	}
@@ -89,17 +90,17 @@ function call() {
 			order: 0, // order不是学号
 			prob: 0 // x = 48 ,prob = 0
 		}
-/*		,
-		{
-			order: 0, // order不是学号
-			prob: 0 // x = 48 ,prob = 0
-		}
-*/
+		/*		,
+				{
+					order: 0, // order不是学号
+					prob: 0 // x = 48 ,prob = 0
+				}
+		*/
 	]
-//	probChanged = setted;
+	//	probChanged = setted;
 	let last = Math.floor(Math.random() * ((repeat ? real : selectedArr).length));
 	for (let i = 0; i < probChanged.length; i++) {
-		if (probChanged[0].prob != null && probChanged[0].order >= 0)
+		if (probChanged[i].prob != null && probChanged[i].order >= 0)
 			last = probRandom <= probChanged[i].prob ? probChanged[i].order : last;
 	}
 	selected = last;
@@ -138,7 +139,7 @@ function pause() {
 		Element("container-role-result").innerHTML = (selectedName);
 	}
 	//  删除被抽中的项
-	selectedArr.forEach(function (item,index,arr) {
+	selectedArr.forEach(function (item, index, arr) {
 		if (item == selectedName) {
 			arr.splice(index, 1);
 		}
@@ -179,26 +180,87 @@ function tabOnClick(tab, tabId) {
 	unavailable(Element("container-role-result"));
 }
 
-window.onload = function(){
+window.onload = function () {
 	selectedArr = deepClone(real);
 	dataclear();
 }
 
 var probPanelBool = false
+var probItem = 1;
 
 function prob() {
 
 	probPanelBool ? unavailable(Element("probPanal")) : available(Element("probPanal"));
 	probPanelBool = !probPanelBool;
-	
+
 }
+
 function probSubmit() {
-//	probChanged.push({
-//		order: Element("order" + i).value,
-//		prob: Element("prob" + i).value
-//	});
-	probChanged[0] = {
-		order: Element("order1").value-1,
-		prob: (48000 / Element("prob1").value - 1000) / 47
+	var probSum = 0;
+	let xSum = 0;
+	probChanged.forEach(function (value) {
+		if (value.prob) {
+
+			xSum += value.prob;
+		}
+	});
+	if (xSum <= 1000) {
+		for (let i = 0; i < probItem; i++) {
+			probChanged[i] = {
+				order: Element("order" + i).value - 1,
+				prob: (48000 / (Element("prob" + i).value) - 1000) / 47 + probSum
+			}
+			probSum += probChanged[i].prob
+		}
+
+		probChanged.reverse(probChanged);
+
+		Element("popTip").innerHTML = "提交成功";
+
+		Element("popTip").style.right = "-10px";
+		setTimeout("Element('popTip').style.right = '-290px'", 1000);
+
 	}
+	else {
+
+		Element("popTip").innerHTML = "概率比1大 泡人呢";
+
+		Element("popTip").style.right = "-10px";
+		setTimeout("Element('popTip').style.right = '-290px'", 1000);
+	}
+}
+
+function probItemAdd() {
+	if (probItem <= 10) {
+
+
+		let div = document.createElement("div");
+		div.className = "prob-group";
+		div.innerHTML = "<input id=\"order" + probItem + "\" type=\"text\" placeholder=\"填学号\" aria-describedby=\"序数\"> \
+		<input id=\"prob"+ probItem + "\" type=\"text\" placeholder=\"填概率的倒数\" aria-describedby=\"分母\">";
+
+		probItem += 1;
+		//将小div放在父容器中
+		Element("probInputGroup").appendChild(div);
+
+	}
+	else {
+
+		Element("popTip").innerHTML = "十多个你还不嫌多 冒漾了";
+
+		Element("popTip").style.right = "-10px";
+		setTimeout("Element('popTip').style.right = '-290px'", 600);
+	}
+
+	//Element("popTip").innerHTML = "";
+
+	//Element("popTip").style.right = "-10px";
+	//setTimeout("Element('popTip').style.right = '-290px'", 600);
+}
+
+function probItemRemove() {
+	Element("popTip").innerHTML = "暂还删不了，刷新吧";
+
+	Element("popTip").style.right = "-10px";
+	setTimeout("Element('popTip').style.right = '-290px'", 1200);
 }
