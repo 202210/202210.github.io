@@ -1,6 +1,7 @@
 body {
     overflow: scroll;
     overflow-x: hidden;
+	background-color:#fbf8fb
 }
 
 p, input{

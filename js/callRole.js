@@ -3,13 +3,14 @@ var student = [
 	"赵春成", "阮怡琳", "吉芳墨", "杨峥", "汪文凯",
 	"王一然", "张小骞", "郝博文", "郭沐阳", "梁家籍",
 	"金思源", "张驰", "王星臣", "刘派", "朱浩民",
-	"唐秀彬", "赵蔓", "郑晰兮", "褚静雯", "康怀予",
+	"唐秀彬", "赵蔓", "褚静雯", "康怀予",
 	"张贺翔", "王姜凝", "高艺维", "李瑞琪", "邹来",
 	"李坤阳", "关斯予", "刘桐辰", "赵禧萌", "杨浩",
 	"李舰潮", "唐睿泽", "张晨雨", "张鑫茜", "周奕男",
 	"纪威名", "马雨石", "莫皖贻", "韩金川", "王馨蕙",
 	"刘洋辰", "孟庆侁", "冯佳宝", "柳佳丽", "闫微",
-	"白翔", "史佳瑞", "张翀齐"
+	"白翔", "史佳瑞", "张翀齐", 
+	"前桌", "后桌", "左边", "右边"
 ];
 
 var probChanged = [];
@@ -223,7 +224,7 @@ function probSubmit() {
 	}
 	else {
 		probChanged = deepClone(lastprobChanged);
-		Element("popTip").innerHTML = "概率比1大 泡人呢";
+		Element("popTip").innerHTML = "我算得概率就是比1大";
 
 		Element("popTip").style.right = "-10px";
 		setTimeout("Element('popTip').style.right = '-290px'", 1000);
@@ -236,7 +237,7 @@ function probItemAdd() {
 
 		let div = document.createElement("div");
 		div.className = "prob-group";
-		div.innerHTML = "<input id=\"order" + probItem + "\" type=\"text\" placeholder=\"填学号\" aria-describedby=\"序数\"> \
+		div.innerHTML = "<input id=\"order" + probItem + "\" type=\"text\" placeholder=\"填序号\" aria-describedby=\"序数\"> \
 		<input id=\"prob"+ probItem + "\" type=\"text\" placeholder=\"填概率的倒数\" aria-describedby=\"分母\">";
 
 		probItem += 1;
@@ -246,7 +247,7 @@ function probItemAdd() {
 	}
 	else {
 
-		Element("popTip").innerHTML = "十多个你还不嫌多 冒漾了";
+		Element("popTip").innerHTML = "十多个，够了";
 
 		Element("popTip").style.right = "-10px";
 		setTimeout("Element('popTip').style.right = '-290px'", 600);
@@ -259,7 +260,7 @@ function probItemAdd() {
 }
 
 function probItemRemove() {
-	Element("popTip").innerHTML = "暂还删不了，刷新吧";
+	Element("popTip").innerHTML = "暂还删不了，试试刷新";
 
 	Element("popTip").style.right = "-10px";
 	setTimeout("Element('popTip').style.right = '-290px'", 1200);
