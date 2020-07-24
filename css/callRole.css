@@ -22,14 +22,18 @@ input {
         box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
     }
 
-.contain {
-    position: relative;
+	
+.itemList {
+  padding: 0px 0px;
+  text-align: center;
+  position: relative;
 }
 
 
 .option-container {
     position: absolute;
     width: 100%;
+	padding-bottom:1000px;
 }
 
 .option {
@@ -129,7 +133,7 @@ input {
 */
 .container-role-container {
     position: absolute;
-    top: 210px;
+    top: 380px;
     width: 100%;
 }
 
