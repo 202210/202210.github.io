@@ -1,6 +1,13 @@
+ul{
+    padding-left:10px;
+    margin-left:10px;
+}
 
+.row{
+    margin-bottom:30px;
+}
 .detail{
-
+    line-height:25px;
 }
 
 

@@ -521,7 +521,7 @@ const video = [
         night: false
     },
     {
-        month: 3, 
+        month: 3,
         day: 16,
         subject: 0,
         href: "1bYpUxHFwvfm0DuhZYqr3EQ",
@@ -533,7 +533,7 @@ const video = [
         month: 3,
         day: 16,
         subject: 1,
-        href: "1_VKAoGrwIvldk4aWH_vztg", 
+        href: "1_VKAoGrwIvldk4aWH_vztg",
         code: "3dxs",
         note: "正弦函数",
         night: false
@@ -543,13 +543,13 @@ const video = [
         day: 16,
         subject: 2,
         href: "13cCmlzuwnrAWL6x_xzmNQg",
-        code: "880e", 
+        code: "880e",
         note: "周测",
         night: false
     },
     {
         month: 3,
-        day: 16, 
+        day: 16,
         subject: 3,
         href: "1hN5WdtTFX84Mfb5hGiLqKg",
         code: "jhub",
@@ -559,7 +559,7 @@ const video = [
     {
         month: 3,
         day: 16,
-        subject: 4, 
+        subject: 4,
         href: "1zdZHS_83YARJGZf7WCAadg",
         code: "1zqj",
         note: "氮导学习题",
@@ -571,7 +571,7 @@ const video = [
         subject: 5,
         href: "1FnJtxzdA_LDdDQUmNR3fTw",
         code: "3pj6",
-        note: "自由组合定律题/应用", 
+        note: "自由组合定律题/应用",
         night: false
     },
     {
@@ -584,7 +584,7 @@ const video = [
         night: false
     },
     {
-        month: 3, 
+        month: 3,
         day: 17,
         subject: 1,
         href: "1OLj6RG61STJTGpE5w1RNDQ",
@@ -602,7 +602,7 @@ const video = [
         night: false
     },
     {
-        month: 3, 
+        month: 3,
         day: 17,
         subject: 3,
         href: "1HTSv1X24KcpOjAh3gX0BBg",
@@ -629,7 +629,7 @@ const video = [
         night: false
     },
     {
-        month: 3, 
+        month: 3,
         day: 17,
         subject: 5,
         href: "19JjlZqyi_Mu9SpE4GWKBag",
@@ -663,7 +663,7 @@ const video = [
         code: "3g8l",
         note: "",
         night: false
-    }, 
+    },
     {
         month: 3,
         day: 18,
@@ -672,7 +672,7 @@ const video = [
         code: "3igq",
         note: "",
         night: false
-    }, 
+    },
     {
         month: 3,
         day: 18,
@@ -683,7 +683,7 @@ const video = [
         night: false
     },
     {
-        month: 3, 
+        month: 3,
         day: 18,
         subject: 1,
         href: "1rOw3X2CKYXGr_LCP0gs61w",
@@ -719,7 +719,7 @@ const video = [
         night: false
     },
     {
-        month: 3, 
+        month: 3,
         day: 19,
         subject: 3,
         href: "1SkWb8ljPoJ4ThMj7h24WQw",
