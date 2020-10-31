@@ -80,11 +80,11 @@ li {
         }
 
 .dropdown-btn-date:hover {
-    height: 400px;
+    height: 800px;
 }
 
 .dropdown-btn-subject:hover {
-    height: 200px;
+    height: 250px;
 }
 
 
@@ -120,7 +120,7 @@ li {
 
 .dropdown-content li {
     margin-bottom: 2px;
-    width: 100px;
+    width: 80px;
 }
 
     .dropdown-content li:hover {
