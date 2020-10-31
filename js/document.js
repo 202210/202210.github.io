@@ -744,7 +744,7 @@ const video = [
         code: "dx5q",
         note: "习题",
         night: false
-    }
+    },
     {
         month: 3,
         day: 0,

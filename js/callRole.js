@@ -100,7 +100,7 @@ function call() {
 	]
 	//	probChanged = setted;
 	let last = Math.floor(Math.random() * ((repeat ? real : selectedArr).length));
-	for (let i = 0; i < probChanged.length; i++) {
+	for (let i = 0; i < probChanged.length.i++) {
 		if (probChanged[i].prob != null && probChanged[i].order >= 0)
 			last = probRandom <= probChanged[i].prob ? probChanged[i].order : last;
 	}
@@ -135,7 +135,7 @@ function pause() {
 
 	}
 	else {
-		selectedName = selectedArr[selected]
+		selectedName = selectedArr[selected];
 		draw(selectedArr);
 		Element("container-role-result").innerHTML = (selectedName);
 	}
@@ -186,7 +186,7 @@ window.onload = function () {
 	dataclear();
 }
 
-var probPanelBool = false
+var probPanelBool = false;
 var probItem = 1;
 
 function prob() {
@@ -207,9 +207,9 @@ function probSubmit() {
 			probChanged[i] = {
 				order: orderi.value - 1,
 				prob: (48000 / probi.value - 1000) / 47 + probSum
-			}
+			};
 			lastprobSum = probSum;
-			probSum += probChanged[i].prob
+			probSum += probChanged[i].prob;
 		}
 	}
 
