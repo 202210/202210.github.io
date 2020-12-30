@@ -86,20 +86,40 @@ body:before{
     /*background-image:url(https://uploads.5068.com/allimg/161226/67-1612261R916-51.jpg);*/
 	/*background:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576871535279&di=c4ef6cbfeecac0b1d1c03dcc6a403bba&imgtype=0&src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Farchive%2F1cf6657329815273c620e1daae1f6072f3c4fffc.jpg);*/
 	
-	background:url(../img/2020springfestival.png);
-	background-size:160%;
-	background-position:-60px -45px;
-	color: rgba(190,97,97,0.9);
+	background:url(../img/head1.jpeg);
+	background-size:110%;
+	background-position:0 0px;
+	/*蓝背景*/
+	color: rgba(245,245,240,0.9);
+	/*高对比度背景*/
+	/*color: rgba(120,160,170,0.7);*/
 	
-	font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+	font-family:  "WenQuanYi Micro Hei", "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei",sans-serif;
+}
+
+.jumbotron h1{
+  font-size:3em;
 }
 
 .jumbotron p{
-  font-size:3em;
-  transform:translate(20px,-10px);
-  text-shadow:0 0 15px #fff;
-  
+  font-size:1em;
+  /*transform:translate(20px,-10px);*/
+  text-shadow:0 0 15px #eaf; 
 }
+
+.jumbotron a{
+   color: #efeffa;
+  background-image: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(235,235,255,0.5) 100%);
+  background-image:      -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(235,235,255,0.5) 100%);
+  
+  /*background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), to(rgba(235,235,255,0.5)));
+  background-image:         linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(235,235,255,0.5) 100%);
+*/
+  padding:5px;
+  padding-left:10px;
+  border-radius:0 30% 30% 0/0 70% 70% 0;
+  }
+
 
 .bottom{
     position:fixed;
