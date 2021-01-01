@@ -100,7 +100,7 @@ function call() {
 	]
 	//	probChanged = setted;
 	let last = Math.floor(Math.random() * ((repeat ? real : selectedArr).length));
-	for (let i = 0; i < probChanged.length.i++) {
+	for (let i = 0; i < probChanged.length;i++) {
 		if (probChanged[i].prob != null && probChanged[i].order >= 0)
 			last = probRandom <= probChanged[i].prob ? probChanged[i].order : last;
 	}

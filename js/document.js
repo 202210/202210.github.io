@@ -821,7 +821,6 @@ function draw() {
         });
 
     }
-    Element("date" + month + "-" + day).innerHTML += "(今天)";
     for (var j = 0; j < subject.length; j++) {
         var li = document.createElement("li");
         li.id = "subject" + j;
