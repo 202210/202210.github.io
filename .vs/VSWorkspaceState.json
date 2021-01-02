@@ -1,10 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\1.0",
+    "\\1.0\\css",
+    "\\1.0\\js",
     "\\css",
-    "\\img",
     "\\js"
   ],
-  "SelectedNode": "\\img",
+  "SelectedNode": "\\1.0\\english.rar",
   "PreviewInSolutionExplorer": false
 }
