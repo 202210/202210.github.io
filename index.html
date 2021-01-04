@@ -21,23 +21,26 @@
   <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <h5 class="my-0 mr-md-auto font-weight-normal">2210</h5>
     <nav class="my-2 my-md-0 mr-md-3">
-      <a class="p-2 text-dark" href="#">作业与通知</a>
-      <a class="p-2 text-dark" href="callRole.html">随机点名</a>
-      <a class="p-2 text-dark" href="document.html">文档（网课）</a>
-      <a class="p-2 text-dark" href="future.html">总览</a>
-      <div class="music-control" style="display:inline; margin-left:10px;" onclick="Music();">
-        <svg class="bi bi-music-note-beamed" width="2em" height="2em" viewBox="0 0 16 16" fill="#dc3545" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z" />
-          <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" />
-          <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z" />
-          <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-        </svg>
-      </div>
+      <a class="p-2 text-dark" href="index.html">作业与通知</a>
+      <a class="p-2 text-dark" href="luck.html">随机点名</a>
+      <a class="p-2 text-dark" href="document.html">文档</a>
+      <a class="p-2 text-dark" href="course.html">网课</a>
+      <a class="p-2 text-dark" href="summary.html">概况</a>
     </nav>
+
+    <div class="music-control" style="display:inline; margin-left:10px;" onclick="Music();">
+      <svg class="bi bi-music-note-beamed" width="1.7em" height="1.5em" viewBox="0 0 16 16" fill="#dc3545" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z" />
+        <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" />
+        <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z" />
+        <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+      </svg>
+    </div>
   </div>
   <div class="music" id="music"></div>
 
-  <div class="container" id="homework">
+
+  <div class="container">
     <div class="jumbotron">
       <h1>高二 · 十班</h1>
       <p style="transform:translate(20px,0)">沈阳市二十中学</p>
@@ -47,7 +50,7 @@
         <a class="link-callRole" href="document.html" role="button">去看网课  <b>&gt;</b></a>
       </p>
     </div>
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" id="homework">
       <h1 class="display-4">作业</h1>
       <p class="lead">从2020写到2021的作业（2020.12.30~2021.1.4）</p>
     </div>
@@ -158,7 +161,7 @@
       </div>
     </div>
 
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <!--<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
       <h1 class="display-4">安排</h1>
       <p class="lead">以群内最新消息为准</p>
       <p class="lead">2020.1.3 22:11更新，按照<a href="doc/寒假所有课需要取的东西.docx">群里文档</a></p>
@@ -258,17 +261,16 @@
           <h4 class="my-0 font-weight-normal">学校 <small class="">/ Campus</small></h4>
         </div>
         <div class="card-body text-warning bg-dark">
-          <h3 class="card-title pricing-card-title text-center">需要带的</h3>
           <ul class="list-unstyled card-text mt-1 mb-1 ">
             <li>1.5—1.29进行线上教学，线上教学平台：腾讯会议。只有每周日不上课，除此之外每天时间安排都一样。5号上课前全员下载，调试完毕。</li>
-            <li>明天学生到校取书。学生到校前在家测温，超过37℃的不要到校，进校园全程戴口罩。9点必须到教室坐好，班级统一开会。家长不允许进入校内，请理解。/li>
+            <li>明天学生到校取书。学生到校前在家测温，超过37℃的不要到校，进校园全程戴口罩。9点必须到教室坐好，班级统一开会。家长不允许进入校内，请理解。</li>
             <li>1月4号晚上7点召开本班线上家长会，时间不会太长，同样是腾讯会议，届时我会发邀请码到本群。</li>
             <li><img src="img/课程表.png" class="img-thumbnail" /></li>
-            
+
           </ul>
         </div>
       </div>
-    </div>
+    </div>-->
 
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
       <div class="row">
@@ -276,42 +278,49 @@
           <img class="mb-2" src="img/logo2.jpg" alt="" width="24" height="24">
           <small class="d-block mb-3 text-muted">2019-2022 今天是<span id="currentDate">"此处应显示当前日期，启用JavaScript以查看"</span></small>
         </div>
-        <div class="col-6 col-md">
-          <h5>功能</h5>
+        <div class="col-5 col-md">
+          <h5>网站地图</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="index.html">作业</a></li>
+            <li><a class="text-muted" href="index.html">作业与通知</a></li>
             <li><a class="text-muted" href="luck.html">点名</a></li>
-            <li><a class="text-muted" href="document.html">资源</a></li>
+            <li><a class="text-muted" href="document.html">文档</a></li>
+            <li><a class="text-muted" href="course.html">网课</a></li>
           </ul>
         </div>
-        <div class="col-6 col-md">
-          <h5>关于高二十班</h5>
+        <div class="col-5 col-md">
+          <h5>关于十班</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="summary.html">总览</a></li>
+            <li><a class="text-muted" href="summary.html">概况</a></li>
             <li><a class="text-muted" href="connect.html">联系</a></li>
-            <li><a class="text-muted" href="privacy.html">隐私政策</a></li>
+            <li><a class="text-muted" href="privacy.html">隐私</a></li>
           </ul>
         </div>
-        <div class="col-6 col-md">
+        <div class="col-5 col-md">
           <h5>常用网站</h5>
           <ul class="list-unstyled text-small">
             <li><a class="text-muted" href="https://www.baidu.com">百度</a></li>
             <li><a class="text-muted" href="https://weibo.com/">微博</a></li>
-            <li><a class="text-muted" href="https://bilibili.com">bilibili</a></li>
+            <li><a class="text-muted" href="https://www.bilibili.com">bilibili</a></li>
             <li><a class="text-muted" href="https://www.huya.com/">虎牙</a></li>
-            <li><a class="text-muted" href="https://www.iqiyi.com/?id=2">爱奇艺</a></li>
+            <li><a class="text-muted" href="https://www.iqiyi.com/">爱奇艺</a></li>
+            <li><a class="text-muted" href="http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml">疫情</a></li>
+            <li><a class="text-muted" href="https://vp.fact.qq.com/home">腾讯辟谣</a></li>
+          </ul>
+        </div>
+
+        <div class="col-5 col-md">
+          <h5>技术</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://www.icourse163.org/">慕课</a></li>
             <li><a class="text-muted" href="https://www.runoob.com/">菜鸟教程</a></li>
             <li><a class="text-muted" href="https://www.csdn.net/">CSDN</a></li>
             <li><a class="text-muted" href="https://msdn.itellyou.cn/">MSDN</a></li>
             <li><a class="text-muted" href="https://getbootstrap.net/">bootstrap中文（非官方）</a></li>
-            <li><a class="text-muted" href="http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml">疫情</a></li>
-            <li><a class="text-muted" href="https://piyao.anquan.org/">辟谣（非官方）</a></li>
           </ul>
         </div>
       </div>
     </footer>
   </div>
-
   <!-- jQuery -->
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
@@ -319,24 +328,23 @@
   <!-- Bootstrap4 JS -->
   <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
 
+
   <script src="js/script.js"></script>
   <script src="js/index.js"></script>
-
-  <!-- 1.0版本冗余 -->
-  <!-- font awesome -->
-  <!--<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">-->
-  <!-- 雏鹰之歌 -->
-  <!-- https://res.wx.qq.com/voice/getvoice?mediaid=MjM5ODE0MTYyMF8yNjUwMDM4ODIy&_res_tag_=audio" -->
-  <!--人人通-->
-  <!-- https://yun.syn.cn/index.php -->
-  <!-- 5`3 -->
-  <!-- http://m-zy.quyixian.com/ -->
-  <!-- 综合素质评价 -->
-  <!-- http://218.60.150.150/ -->
-  <!-- 检查CSS -->
-  <!-- http://jigsaw.w3.org/css-validator/ -->
-  <!-- script -->
-
-
 </body>
 </html>
+
+<!-- 1.0版本冗余 -->
+<!-- font awesome -->
+<!--<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">-->
+<!-- 雏鹰之歌 -->
+<!-- https://res.wx.qq.com/voice/getvoice?mediaid=MjM5ODE0MTYyMF8yNjUwMDM4ODIy&_res_tag_=audio" -->
+<!--人人通-->
+<!-- https://yun.syn.cn/index.php -->
+<!-- 5`3 -->
+<!-- http://m-zy.quyixian.com/ -->
+<!-- 综合素质评价 -->
+<!-- http://218.60.150.150/ -->
+<!-- 检查CSS -->
+<!-- http://jigsaw.w3.org/css-validator/ -->
+<!-- script -->

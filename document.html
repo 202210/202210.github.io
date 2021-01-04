@@ -1,202 +1,103 @@
 ﻿
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="img/favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <meta name="description" content="高二十班">
+  <meta name="author" content="liqure">
+  <link rel="icon" href="img/logo1.jpg">
 
-  <title>文档 | 高二十班</title>
+  <title>文档  |  高二十班</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/styles0.css" rel="stylesheet">
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
   <link href="css/document.css" rel="stylesheet">
 
-  <!-- awesome图标 taimanle- ->
-  <script src="https://use.fontawesome.com/9a90a02525.js"></script>-->
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-  <script src="js/document.js"></script>
-
-
+  <script src="js/music.js"></script>
 </head>
-
 <body>
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">2210</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <a class="p-2 text-dark" href="index.html">作业与通知</a>
+      <a class="p-2 text-dark" href="luck.html">随机点名</a>
+      <a class="p-2 text-dark" href="document.html">文档</a><a class="p-2 text-dark" href="course.html">网课</a>
+      <a class="p-2 text-dark" href="summary.html">概况</a>
+    </nav>
 
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse"
-                data-target="#navbar-collapse">
-          <span class="sr-only">菜单</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">2210</a>
-      </div>
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="index.html">主页</a></li>
-          <li><a href="callRole.html">随机点名</a></li>
-          <li class="active"><a href="#">文档中心</a></li>
-          <li><a href="future.html">总览</a></li>
-        </ul>
-      </div>
+    <div class="music-control" style="display:inline; margin-left:10px;" onclick="Music();">
+      <svg class="bi bi-music-note-beamed" width="1.7em" height="1.5em" viewBox="0 0 16 16" fill="#dc3545" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z" />
+        <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" />
+        <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z" />
+        <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+      </svg>
     </div>
-  </nav>
-
+  </div>
+  <div class="music" id="music"></div>
 
   <div class="container">
-    <div class="row title">
-      来~啦~
-      <hr />
-    </div>
-    <div class="row">
-      <!-- VCam教程开始 -->
-      <div class="firstcol col-sm-6 col-md-6 col-lg-6">
-        <!--
-          <h2>虚拟摄像头是个啥：</h2>
-          <p>就在电脑上再安一个摄像头，显示的是你设置的东西，包括照片 GIF 视频 实时屏幕等等，甚至加特效</p>
-          <hr />
-          <p>
-            如果有个“如图.jpg”（没有就算了）：<br />
-            ①按win+r，输入regedit并运行<br />
-            ②HKEY_USERS里有两个特长的不带class的，记住有里面software有e2esoft的（重命名复制）<br />
-            ③右键reg文件，打开方式记事本，把H什么那块替换为HKEY_USERS/加特长的<br />
-            ④保存关闭文件，双击文件，运行它
-          </p>
-          <hr />
-          <p>“缩小”水印的办法：在选项里找到“摄像头设置” 调大“默认视频大小”</p>
-          <p>虚拟摄像头占内存大，容易卡，慢慢操作，甚至可以卡bug</p>
-          <p>⏸就是定格，⏹键就是停止（将播放软件自带的图像）</p>
-          <p>尽量用jpg格式的图片，bmp/png/gif不稳定，图片和视频一起放也不稳定</p>
-          <p><strong>花钱买个高级的虚拟摄像机以上情况均不会出现</strong></p>
-          <p>不负因使用虚拟摄像头而死亡的责任（比如你用屏幕分享分享老师的脸或者R18等等）</p>
-        -->
-        <div class="record-title">
-          <h1>录播</h1>
-          <h4>凑合看吧</h4>
-          <h3>没有就是没录，周测的第二天更<br /><small>因为是流媒体,所以显示的时长可能不对</small></h3>
-          
+    <a href="document0.html">前往旧版</a>
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img class="mb-2" src="img/logo2.jpg" alt="" width="24" height="24">
+          <small class="d-block mb-3 text-muted">2019-2022 今天是<span id="currentDate">"此处应显示当前日期，启用JavaScript以查看"</span></small>
         </div>
-
-        <div class="dropdown">
-          <div class="dropdown-btn dropdown-btn-date">
-            <p><span id="dropdown-date-title" class="dropdown-title">选择日期</span><i class="fa fa-chevron-down" aria-hidden="true"></i></p>
-            <ul id="dropdown-content-date" class="dropdown-content">
-              <li onclick='changeCondition(true, "day", 0, "dropdown-date-title", "所有日子")'>所有日子</li>
-            </ul>
-          </div>
-          <div class="dropdown-btn dropdown-btn-subject">
-            <p><span id="dropdown-subject-title" class="dropdown-title">选择科目</span><i class="fa fa-chevron-down" aria-hidden="true"></i></p>
-            <ul id="dropdown-content-subject" class="dropdown-content">
-              <li onclick='changeCondition(true, "subject", 0, "dropdown-subject-title", "所有科目");'>所有科目</li>
-            </ul>
-          </div>
+        <div class="col-5 col-md">
+          <h5>网站地图</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="index.html">作业与通知</a></li>
+            <li><a class="text-muted" href="luck.html">点名</a></li>
+            <li><a class="text-muted" href="document.html">文档</a></li>
+            <li><a class="text-muted" href="course.html">网课</a></li>
+          </ul>
         </div>
-        <div class="result-box">
-          <ul id="result-content" class="result-content">
+        <div class="col-5 col-md">
+          <h5>关于十班</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="summary.html">概况</a></li>
+            <li><a class="text-muted" href="connect.html">联系</a></li>
+            <li><a class="text-muted" href="privacy.html">隐私</a></li>
+          </ul>
+        </div>
+        <div class="col-5 col-md">
+          <h5>常用网站</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://www.baidu.com">百度</a></li>
+            <li><a class="text-muted" href="https://weibo.com/">微博</a></li>
+            <li><a class="text-muted" href="https://www.bilibili.com">bilibili</a></li>
+            <li><a class="text-muted" href="https://www.huya.com/">虎牙</a></li>
+            <li><a class="text-muted" href="https://www.iqiyi.com/">爱奇艺</a></li>
+            <li><a class="text-muted" href="http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml">疫情</a></li>
+            <li><a class="text-muted" href="https://vp.fact.qq.com/home">腾讯辟谣</a></li>
           </ul>
         </div>
 
-
-
-        <!--p>压缩画质了，能比以前小点</p-->
-      </div>
-      <!-- VCam教程结束 -->
-      <!-- 教材下载开始 -->
-      <div class="col-sm-3 col-md-3 col-lg-3 ">
-        <div class="download">
-          <h1>教材下载(pdf)</h1>
-          <ul>
-            <li><a href="https://bp.pep.com.cn/jc/ptgzjks/pgywjks/202002/P020200210117675525703.pdf">语文·下册</a></li>
-            <li><a href="https://bp.pep.com.cn/jc/ptgzjks/pgsxjks/202002/P020200210762452690155.pdf">数学·必修三</a></li>
-            <li><a href="https://bp.pep.com.cn/jc/ptgzjks/pgsxjks/202002/P020200210762615749555.pdf">数学·必修四</a></li>
-            <li><a href="https://bp.pep.com.cn/jc/ptgzjks/pgwljks/202001/P020200210116744006687.pdf">物理·必修二</a></li>
-            <li><a href="https://bp.pep.com.cn/jc/ptgzjks/pghxjks/202001/P020200210114583937847.pdf">化学·必修二</a></li>
-            <li><a href="https://bp.pep.com.cn/jc/ptgzjks/pgswjks/202001/P020200210115333229935.pdf">生物·必修二（遗传与进化）</a></li>
-            <li class="li_two">
-              英语·必修二
-              <ul class="ul_two">
-                <li><a href="https://cdn.unischool.cn/nse/h5/textbook/pdf/newSenior/2/英语必修第二册 - U1.pdf">U1</a></li>
-                <li><a href="https://cdn.unischool.cn/nse/h5/textbook/pdf/newSenior/2/英语必修第二册 - U2.pdf">U2</a></li>
-                <li><a href="https://cdn.unischool.cn/nse/h5/textbook/pdf/newSenior/2/英语必修第二册 - U3.pdf">U3</a></li>
-                <li><a href="https://cdn.unischool.cn/nse/h5/textbook/pdf/newSenior/2/英语必修第二册 - U4.pdf">U4</a></li>
-                <li><a href="https://cdn.unischool.cn/nse/h5/textbook/pdf/newSenior/2/英语必修第二册 - U5.pdf">U5</a></li>
-                <li><a href="https://cdn.unischool.cn/nse/h5/textbook/pdf/newSenior/2/英语必修第二册 - U6.pdf">U6</a></li>
-                <li><a href="https://cdn.unischool.cn/nse/h5/textbook/pdf/newSenior/2/英语必修第二册 - Vocabulary.pdf">词汇</a></li>
-              </ul>
-            </li>
-            <li class="li_three">
-              英语·必修三
-              <ul class="ul_three">
-                <li><a href="https://cdn.unischool.cn/nse/h5/textbook/pdf/newSenior/3/英语必修第三册 - U1.pdf">U1</a></li>
-                <li><a href="https://cdn.unischool.cn/nse/h5/textbook/pdf/newSenior/3/英语必修第三册 - U2.pdf">U2</a></li>
-                <li><a href="https://cdn.unischool.cn/nse/h5/textbook/pdf/newSenior/3/英语必修第三册 - U3.pdf">U3</a></li>
-                <li><a href="https://cdn.unischool.cn/nse/h5/textbook/pdf/newSenior/3/英语必修第三册 - U4.pdf">U4</a></li>
-                <li><a href="https://cdn.unischool.cn/nse/h5/textbook/pdf/newSenior/3/英语必修第三册 - U5.pdf">U5</a></li>
-                <li><a href="https://cdn.unischool.cn/nse/h5/textbook/pdf/newSenior/3/英语必修第三册 - U6.pdf">U6</a></li>
-                <li><a href="https://cdn.unischool.cn/nse/h5/textbook/pdf/newSenior/3/英语必修第三册 - Vocabulary.pdf">词汇</a></li>
-              </ul>
-            </li>
-            <li><a href="https://bp.pep.com.cn/jc/">其他人教教科书</a></li>
-            <li><a href="https://cdn.unischool.cn/nse/h5/textbook/resDownload.html">其他外研社教科书</a></li>
-
+        <div class="col-5 col-md">
+          <h5>技术</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://www.icourse163.org/">慕课</a></li>
+            <li><a class="text-muted" href="https://www.runoob.com/">菜鸟教程</a></li>
+            <li><a class="text-muted" href="https://www.csdn.net/">CSDN</a></li>
+            <li><a class="text-muted" href="https://msdn.itellyou.cn/">MSDN</a></li>
+            <li><a class="text-muted" href="https://getbootstrap.net/">bootstrap中文（非官方）</a></li>
           </ul>
         </div>
       </div>
-      <!-- 教材下载结束 -->
-      <!-- 教材预览开始 -->
-      <div class="col-sm-3 col-md-3 col-lg-3 ">
-        <div class="view">
-          <h1>教材预览</h1>
-          <ul>
-            <li><a href="http://bp.pep.com.cn/ebook/gzywbxxc/">语文·下册</a></li>
-            <li><a href="http://bp.pep.com.cn/ebook/gzsxbbxsan/">数学·必修三</a></li>
-            <li><a href="http://bp.pep.com.cn/ebook/gzsxbbxssi/">数学·必修四</a></li>
-            <li><a href="http://bp.pep.com.cn/ebook/gzwlbxer/">物理·必修二</a></li>
-            <li><a href="http://bp.pep.com.cn/ebook/gzhxbxer/">化学·必修二</a></li>
-            <li><a href="http://bp.pep.com.cn/ebook/gzswbxer/">生物·必修二（遗传与进化）</a></li>
-          </ul>
-          <p>没在里的就是预览不了，有的浏览器自己就可预览pdf，即可忽略这趟</p>
-        </div>
-      </div>
-      <!-- 教材预览结束 -->
-    </div>
-
-  </div><!-- /.container -->
-
-  <footer class="row bottom" id="bottom">
-    图标作者：<a href="http://glyphicons.com/">http://glyphicons.com/</a>。
-  </footer>
-  <div class="imageviewer">
-    <img id="image-viewing" src="" />
+    </footer>
   </div>
-  <!-- Bootstrap core JavaScript
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-
-  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <!--<script src="js/ie10-viewport-bug-workaround.js"></script>-->
-
-  <script src="js/basic.js"></script>
-  <script language="javascript">
-
-  </script>
+  <!-- jQuery -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap4 JS -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
 
 
+  <script src="js/script.js"></script>
+  <script src="js/document.js"></script>
 </body>
 </html>

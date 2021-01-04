@@ -32,7 +32,6 @@ body {
   padding-top: 50px;
 }
 body:before{
-    background-image:url(https://i0.hdslb.com/bfs/article/5e85dcc9584a66d176c6422dcc2b963a4700c904.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     width:100%;
