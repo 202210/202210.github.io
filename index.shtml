@@ -50,7 +50,7 @@
         <a class="link-callRole" href="document.html" role="button">去看网课  <b>&gt;</b></a>
       </p>
     </div>
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" id="homework">
+    <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" id="homework">
       <h1 class="display-4">作业</h1>
       <p class="lead">从2020写到2021的作业（2020.12.30~2021.1.4）</p>
     </div>
@@ -162,117 +162,117 @@
     </div>
 
     <!--<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-      <h1 class="display-4">安排</h1>
-      <p class="lead">以群内最新消息为准</p>
-      <p class="lead">2020.1.3 22:11更新，按照<a href="doc/寒假所有课需要取的东西.docx">群里文档</a></p>
+    <h1 class="display-4">安排</h1>
+    <p class="lead">以群内最新消息为准</p>
+    <p class="lead">2020.1.3 22:11更新，按照<a href="doc/寒假所有课需要取的东西.docx">群里文档</a></p>
+  </div>
+
+  <div class="card-columns">
+    <div class="card mb-2 shadow-sm border-primary">
+      <div class="card-header  bg-primary text-white">
+        <h4 class="my-0 font-weight-normal">数学 <small class="">/ Maths</small></h4>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title pricing-card-title text-center">上课安排</h3>
+        <ul class="list-unstyled card-text mt-1 mb-1 ">
+          <li>先讲期末的小册子！（黄本校本教材五）</li>
+          <li>6号左右会发我们最新印的假期小册子！（校本教材六，还没发）黄本结束之后就讲这个小册子！</li>
+        </ul>
+        <h3 class="card-title pricing-card-title text-center">需要带的</h3>
+        <ul class="list-unstyled card-text mt-1 mb-1 ">
+          <li>教材：所有</li>
+          <li>练习册：黄皮校本（五）、校本（六）、所有本学期练习册</li>
+          <li>注：为以防万一，需要带回所有数学书/本学期练习册</li>
+        </ul>
+      </div>
     </div>
+    <div class="card mb-2 shadow-sm border-secondary">
+      <div class="card-header  bg-secondary text-white">
+        <h4 class="my-0 font-weight-normal">语文 <small class="">/ Chinese </small></h4>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title pricing-card-title text-center">需要带的</h3>
+        <ul class="list-unstyled card-text mt-1 mb-1 ">
+          <li>教材：必修上下、选修上中</li>
+          <li>卷纸：之前订的一沓卷子（文学常识+套卷）</li>
+          <li>练习册：不愤不启</li>
+          <li>笔记：总结本</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card mb-2 shadow-sm border-success">
+      <div class="card-header  bg-success text-white">
+        <h4 class="my-0 font-weight-normal">英语 <small class="">/ English</small></h4>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title pricing-card-title text-center">需要带的</h3>
+        <ul class="list-unstyled card-text mt-1 mb-1 ">
+          <li>教材：选修二三</li>
+          <li>报纸：假期作业、新学期报纸（11~26期、限时能力综合训练21~25期）</li>
+          <li>练习册：五三【选修二三】、辞海点金、大黄本</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card mb-2 shadow-sm border-danger">
+      <div class="card-header  bg-danger text-white">
+        <h4 class="my-0 font-weight-normal">物理 <small class="">/ Physics</small></h4>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title pricing-card-title text-center">需要带的</h3>
+        <ul class="list-unstyled card-text mt-1 mb-1 ">
+          <li>教材：选修二三</li>
+          <li>练习册：粉本、绿色通道【选修二三】、蓝本寒假作业、选修二的练习册</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card mb-2 shadow-sm  border-info">
+      <div class="card-header bg-info text-white">
+        <h4 class="my-0 font-weight-normal">化学 <small class="">/ Chemical</small></h4>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title pricing-card-title text-center">需要带的</h3>
+        <ul class="list-unstyled card-text mt-1 mb-1 ">
+          <li>教材：必修二、选修一二三</li>
+          <li>卷纸：7张卷（后发的7页知识点）</li>
+          <li>
+            练习册：黄本练习册、之前没有做完的蓝色选择性必修2的练习题（带高考题的那本）
+            <img src="img/化学导学.jpg" class="img-thumbnail" />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="card mb-2 shadow-sm  border-dark">
+      <div class="card-header  bg-dark text-white">
+        <h4 class="my-0 font-weight-normal text-center">生物 <small class="">/ Biology</small></h4>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title pricing-card-title text-center">需要带的</h3>
+        <ul class="list-unstyled card-text mt-1 mb-1 ">
+          <li>教材：选修一二三</li>
+          <li>卷纸：所有题</li>
+          <li>练习册：作业与测评</li>
+          <li>明天发的新书</li>
+          <li>明天发的新卷</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card mb-2 shadow-sm  border-warning">
+      <div class="card-header  bg-dark text-warning">
+        <h4 class="my-0 font-weight-normal">学校 <small class="">/ Campus</small></h4>
+      </div>
+      <div class="card-body text-warning bg-dark">
+        <ul class="list-unstyled card-text mt-1 mb-1 ">
+          <li>1.5—1.29进行线上教学，线上教学平台：腾讯会议。只有每周日不上课，除此之外每天时间安排都一样。5号上课前全员下载，调试完毕。</li>
+          <li>明天学生到校取书。学生到校前在家测温，超过37℃的不要到校，进校园全程戴口罩。9点必须到教室坐好，班级统一开会。家长不允许进入校内，请理解。</li>
+          <li>1月4号晚上7点召开本班线上家长会，时间不会太长，同样是腾讯会议，届时我会发邀请码到本群。</li>
+          <li><img src="img/课程表.png" class="img-thumbnail" /></li>
 
-    <div class="card-columns">
-      <div class="card mb-2 shadow-sm border-primary">
-        <div class="card-header  bg-primary text-white">
-          <h4 class="my-0 font-weight-normal">数学 <small class="">/ Maths</small></h4>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title pricing-card-title text-center">上课安排</h3>
-          <ul class="list-unstyled card-text mt-1 mb-1 ">
-            <li>先讲期末的小册子！（黄本校本教材五）</li>
-            <li>6号左右会发我们最新印的假期小册子！（校本教材六，还没发）黄本结束之后就讲这个小册子！</li>
-          </ul>
-          <h3 class="card-title pricing-card-title text-center">需要带的</h3>
-          <ul class="list-unstyled card-text mt-1 mb-1 ">
-            <li>教材：所有</li>
-            <li>练习册：黄皮校本（五）、校本（六）、所有本学期练习册</li>
-            <li>注：为以防万一，需要带回所有数学书/本学期练习册</li>
-          </ul>
-        </div>
+        </ul>
       </div>
-      <div class="card mb-2 shadow-sm border-secondary">
-        <div class="card-header  bg-secondary text-white">
-          <h4 class="my-0 font-weight-normal">语文 <small class="">/ Chinese </small></h4>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title pricing-card-title text-center">需要带的</h3>
-          <ul class="list-unstyled card-text mt-1 mb-1 ">
-            <li>教材：必修上下、选修上中</li>
-            <li>卷纸：之前订的一沓卷子（文学常识+套卷）</li>
-            <li>练习册：不愤不启</li>
-            <li>笔记：总结本</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card mb-2 shadow-sm border-success">
-        <div class="card-header  bg-success text-white">
-          <h4 class="my-0 font-weight-normal">英语 <small class="">/ English</small></h4>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title pricing-card-title text-center">需要带的</h3>
-          <ul class="list-unstyled card-text mt-1 mb-1 ">
-            <li>教材：选修二三</li>
-            <li>报纸：假期作业、新学期报纸（11~26期、限时能力综合训练21~25期）</li>
-            <li>练习册：五三【选修二三】、辞海点金、大黄本</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card mb-2 shadow-sm border-danger">
-        <div class="card-header  bg-danger text-white">
-          <h4 class="my-0 font-weight-normal">物理 <small class="">/ Physics</small></h4>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title pricing-card-title text-center">需要带的</h3>
-          <ul class="list-unstyled card-text mt-1 mb-1 ">
-            <li>教材：选修二三</li>
-            <li>练习册：粉本、绿色通道【选修二三】、蓝本寒假作业、选修二的练习册</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card mb-2 shadow-sm  border-info">
-        <div class="card-header bg-info text-white">
-          <h4 class="my-0 font-weight-normal">化学 <small class="">/ Chemical</small></h4>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title pricing-card-title text-center">需要带的</h3>
-          <ul class="list-unstyled card-text mt-1 mb-1 ">
-            <li>教材：必修二、选修一二三</li>
-            <li>卷纸：7张卷（后发的7页知识点）</li>
-            <li>
-              练习册：黄本练习册、之前没有做完的蓝色选择性必修2的练习题（带高考题的那本）
-              <img src="img/化学导学.jpg" class="img-thumbnail" />
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="card mb-2 shadow-sm  border-dark">
-        <div class="card-header  bg-dark text-white">
-          <h4 class="my-0 font-weight-normal text-center">生物 <small class="">/ Biology</small></h4>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title pricing-card-title text-center">需要带的</h3>
-          <ul class="list-unstyled card-text mt-1 mb-1 ">
-            <li>教材：选修一二三</li>
-            <li>卷纸：所有题</li>
-            <li>练习册：作业与测评</li>
-            <li>明天发的新书</li>
-            <li>明天发的新卷</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card mb-2 shadow-sm  border-warning">
-        <div class="card-header  bg-dark text-warning">
-          <h4 class="my-0 font-weight-normal">学校 <small class="">/ Campus</small></h4>
-        </div>
-        <div class="card-body text-warning bg-dark">
-          <ul class="list-unstyled card-text mt-1 mb-1 ">
-            <li>1.5—1.29进行线上教学，线上教学平台：腾讯会议。只有每周日不上课，除此之外每天时间安排都一样。5号上课前全员下载，调试完毕。</li>
-            <li>明天学生到校取书。学生到校前在家测温，超过37℃的不要到校，进校园全程戴口罩。9点必须到教室坐好，班级统一开会。家长不允许进入校内，请理解。</li>
-            <li>1月4号晚上7点召开本班线上家长会，时间不会太长，同样是腾讯会议，届时我会发邀请码到本群。</li>
-            <li><img src="img/课程表.png" class="img-thumbnail" /></li>
-
-          </ul>
-        </div>
-      </div>
-    </div>-->
-
-    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    </div>
+  </div>-->
+    <!--#include file="model/footer.html"-->
+    <!--<footer class="pt-4 my-md-5 pt-md-5 border-top">
       <div class="row">
         <div class="col-12 col-md">
           <img class="mb-2" src="img/logo2.jpg" alt="" width="24" height="24">
@@ -319,7 +319,7 @@
           </ul>
         </div>
       </div>
-    </footer>
+    </footer>-->
   </div>
   <!-- jQuery -->
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

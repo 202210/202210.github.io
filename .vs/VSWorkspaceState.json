@@ -2,11 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\1.0",
-    "\\1.0\\css",
-    "\\1.0\\js",
     "\\css",
+    "\\doc",
+    "\\img",
     "\\js"
   ],
-  "SelectedNode": "\\1.0\\english.rar",
+  "SelectedNode": "\\model.html",
   "PreviewInSolutionExplorer": false
 }
