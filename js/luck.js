@@ -44,7 +44,7 @@ var food = [
     "奶茶", "咖啡", "果汁"," 凉水", "甜甜花酿鸡", "二十食堂", "再等一等"
 ];
 var rosterOrdinary = food;
-var rosterCandidate = [];
+var rosterCandidate food;
 var rosterSelected = [];
 
 var divMember = [];
@@ -193,7 +193,6 @@ function changeBgcolor() {
 }
 
 window.onload = function () {
-    rosterCandidate = student;
     //判断点击的元素
     var rosterListListen = document.getElementsByClassName("roster");
     for (let i = 0; i < rosterListListen.length; i++) {
