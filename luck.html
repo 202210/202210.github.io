@@ -8,7 +8,7 @@
   <meta name="author" content="liqure">
   <link rel="icon" href="img/logo1.jpg">
 
-  <title>随机  |  高二十班</title>
+  <title>随机  |  高三十班</title>
 
   <!-- Bootstrap core CSS -->
   <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
       <a class="p-2 text-dark" href="index.html">作业与通知</a>
       <a class="p-2 text-dark" href="luck.html">随机点名</a>
       <a class="p-2 text-dark" href="document.html">文档</a><a class="p-2 text-dark" href="course.html">网课</a>
-      <a class="p-2 text-dark" href="summary.html">概况</a>
+      <a class="p-2 text-dark" href="text.html">打字板</a>
     </nav>
 
     <div class="music-control" style="display:inline; margin-left:10px;" onclick="Music();">
@@ -40,51 +40,95 @@
 
   <div class="container">
 
-    <a href="callRole.html">前往旧版</a>
+    <a href="callRole.html"></a>
+
+    <ul class="rosterSelect">
+      <li class="roster">十班</li>
+      <li class="roster">数字</li>
+      <li class="roster">科目</li>
+      <li class="roster">导入</li>
+    </ul>
+
+    <div class="importFile">
+      <div class="alertCoverSession" onclick='closeAlert("importFile")'></div>
+      <div class="alertOperationSession">
+        <p>支持导入一个2M以下的txt文件,文件编码为UTF-8</p>
+        <p>文件中每个项目占一行</p>
+        <input type="file" onchange="importFile(this)" />
+      </div>
+    </div>
+
+    <div class="rosterControl">
+      <button id="btnRunPause" class="btnRunPause" onclick="switchRunPause();">开始</button>
+
+      <button id="btnRepeatable" class="btnRepeatable" onclick="repeatable();">
+        去重已关
+      </button>
+      <button id="btnClearMemory" class="btnClearMemory" onclick="clearMemory();">清除记忆</button>
+      <button id="btnModifyProb" class="btnModifyProb" onclick="modifyProb();">修改概率</button>
+
+      <div id="panelModifyProb" class="panelModifyProb">
+        <div id="groupProbModify" class="groupProbModify"></div>
+        <button onclick="probModify_Submit();">保存更改</button>
+        <button onclick="probModify_Add();">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
+            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z" />
+          </svg>
+        </button>
+        <button onclick="probModify_Delete();">删除一项</button>
+      </div>
+    </div>
+    
+    <div class="memberShow">
+      <div id="memberSelected" class="memberSelected"></div>
+      <div id="memberCandidate" class="memberCandidate"></div>
+    </div>
+
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
       <div class="row">
         <div class="col-12 col-md">
           <img class="mb-2" src="img/logo2.jpg" alt="" width="24" height="24">
-          <small class="d-block mb-3 text-muted">2019-2022 今天是<span id="currentDate">"此处应显示当前日期，启用JavaScript以查看"</span></small>
+          <small class="d-block mb-3 text-muted-old">2019-2022 今天是<span id="currentDate">"此处应显示当前日期，启用JavaScript以查看"</span></small>
+          <br/>
+          <div onclick="changeBgcolor()">变换背景</div>
         </div>
         <div class="col-5 col-md">
           <h5>网站地图</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="index.html">作业与通知</a></li>
-            <li><a class="text-muted" href="luck.html">点名</a></li>
-            <li><a class="text-muted" href="document.html">文档</a></li>
-            <li><a class="text-muted" href="course.html">网课</a></li>
+            <li><a class="text-muted-old" href="index.html">作业与通知</a></li>
+            <li><a class="text-muted-old" href="luck.html">点名</a></li>
+            <li><a class="text-muted-old" href="document.html">文档</a></li>
+            <li><a class="text-muted-old" href="course.html">网课</a></li>
           </ul>
         </div>
         <div class="col-5 col-md">
           <h5>关于十班</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="summary.html">概况</a></li>
-            <li><a class="text-muted" href="connect.html">联系</a></li>
-            <li><a class="text-muted" href="privacy.html">隐私</a></li>
+            <li><a class="text-muted-old" href="summary.html">概况</a></li>
           </ul>
         </div>
         <div class="col-5 col-md">
           <h5>常用网站</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="https://www.baidu.com">百度</a></li>
-            <li><a class="text-muted" href="https://weibo.com/">微博</a></li>
-            <li><a class="text-muted" href="https://www.bilibili.com">bilibili</a></li>
-            <li><a class="text-muted" href="https://www.huya.com/">虎牙</a></li>
-            <li><a class="text-muted" href="https://www.iqiyi.com/">爱奇艺</a></li>
-            <li><a class="text-muted" href="http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml">疫情</a></li>
-            <li><a class="text-muted" href="https://vp.fact.qq.com/home">腾讯辟谣</a></li>
+            <li><a class="text-muted-old" href="https://www.baidu.com">百度</a></li>
+            <li><a class="text-muted-old" href="https://weibo.com/">微博</a></li>
+            <li><a class="text-muted-old" href="https://www.bilibili.com">bilibili</a></li>
+            <li><a class="text-muted-old" href="https://www.huya.com/">虎牙</a></li>
+            <li><a class="text-muted-old" href="https://www.iqiyi.com/">爱奇艺</a></li>
+            <li><a class="text-muted-old" href="http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml">疫情</a></li>
+            <li><a class="text-muted-old" href="https://vp.fact.qq.com/home">腾讯辟谣</a></li>
           </ul>
         </div>
 
         <div class="col-5 col-md">
           <h5>技术</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="https://www.icourse163.org/">慕课</a></li>
-            <li><a class="text-muted" href="https://www.runoob.com/">菜鸟教程</a></li>
-            <li><a class="text-muted" href="https://www.csdn.net/">CSDN</a></li>
-            <li><a class="text-muted" href="https://msdn.itellyou.cn/">MSDN</a></li>
-            <li><a class="text-muted" href="https://getbootstrap.net/">bootstrap中文（非官方）</a></li>
+            <li><a class="text-muted-old" href="https://www.icourse163.org/">慕课</a></li>
+            <li><a class="text-muted-old" href="https://www.runoob.com/">菜鸟教程</a></li>
+            <li><a class="text-muted-old" href="https://www.csdn.net/">CSDN</a></li>
+            <li><a class="text-muted-old" href="https://msdn.itellyou.cn/">MSDN</a></li>
+            <li><a class="text-muted-old" href="https://getbootstrap.net/">bootstrap中文（非官方）</a></li>
           </ul>
         </div>
       </div>
@@ -99,6 +143,7 @@
 
 
   <script src="js/script.js"></script>
+  <script src="js/basic.js"></script>
   <script src="js/luck.js"></script>
 </body>
 </html>
