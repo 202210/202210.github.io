@@ -89,7 +89,7 @@ function run() {
     batchDraw("member", rosterCandidate, "memberCandidate", true);
     divMember = document.getElementsByClassName("member");
     select();
-    time = setInterval("select()", 200);
+    time = setInterval("select()", 150);
 }
 function pause() {
     Element("btnRunPause").innerHTML = "开始";
