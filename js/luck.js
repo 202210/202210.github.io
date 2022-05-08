@@ -25,11 +25,25 @@ var number = [
     "21", "22", "23", "24", "25", "26", "27", "28", "29", "30",
     "31", "32", "33", "34", "35", "36", "37", "38", "39", "40",
     "41", "42", "43", "44", "45", "46", "47", "48", "49", "50",
-    "51", "52", "53", "54", "55", "56", "56", "58", "59", "60",
-    "61", "62", "63", "64", "65", "66"
+    "51", "52", "53", "54", "55", "56", "57", "58", "59", "60",
+    "61", "62", "63", "64", "65", "66", "67", "68", "69", "70",
+    "71", "72", "73", "74", "75", "76", "77", "78", "79", "80",
+    "81", "82", "83", "84", "85", "86", "87", "88", "89", "90",
+    "91", "92", "93", "94", "95", "96", "97", "98", "99", "100"
 ];
 
-var rosterOrdinary = student;
+var food = [
+    "汉堡", "披萨", "麻辣烫", "螺蛳粉", "酸辣粉",
+    "沙拉和三明治", "小烧烤", "小龙虾", "炸鸡", "热粥", "炒饭",
+    "咖喱", "海鲜", "盖浇", "辣", "素", "我要减肥", "意面", "米线",
+    "饺子", "包子", "火烧", "馄饨", "汤圆", "馅饼or盒子",
+    "吊炉饼葱花饼", "凉皮", "寿司", "烤肉", "火锅", "蛋糕",
+    "热面", "冷面", "凉拌面", "打糕", "肉夹馍", "滋补汤",
+    "重庆小面", "兰州拉面", "油茶面", "烤鱼", "牛排", "清真",
+    "港式", "粤菜", "砂锅", "竹筒饭", "日式", "韩式", "晚茶",
+    "奶茶", "咖啡", "果汁"," 凉水", "甜甜花酿鸡", "二十食堂", "再等一等"
+];
+var rosterOrdinary = food;
 var rosterCandidate = [];
 var rosterSelected = [];
 
@@ -150,7 +164,7 @@ function importFile(obj) {
     reader.onload = function (e) {
         var rosterFileContent = e.target.result;
 
-        rosterOrdinary = rosterFileContent.split(/[\n,]/g);
+        rosterOrdinary = rosterFileContent.split(/[\n]/g);
         switchStatue = true;
         pause();
         clearMemory();
@@ -166,9 +180,12 @@ function closeAlert(alertName){
 var bgColorStatue = 0;
 var bgColorBackup = [
     "linear-gradient(44deg, #7e1671 0%, #2177b8 99%, #11659a 100%)",
-    "#20894d",
+    "#37620f",
     "#f7da94",
-    "#accbee"
+    "#accbee",
+    "#efefef",
+    "#707070",
+    "#d59dac"
 ];
 function changeBgcolor() {
     bgColorStatue < bgColorBackup.length ? bgColorStatue++ : bgColorStatue = 0;
@@ -182,25 +199,31 @@ window.onload = function () {
     for (let i = 0; i < rosterListListen.length; i++) {
         rosterListListen[i].onclick = function () {
             switch (i) {
-                case 0:
-                    rosterOrdinary = student;
+                case 0: 
+                    rosterOrdinary = food;
                     switchStatue = true;
                     pause();
                     clearMemory();
                     break;
                 case 1:
-                    rosterOrdinary = number;
+                    rosterOrdinary = student;
                     switchStatue = true;
                     pause();
                     clearMemory();
                     break;
                 case 2:
-                    rosterOrdinary = subject;
+                    rosterOrdinary = number;
                     switchStatue = true;
                     pause();
                     clearMemory();
                     break;
                 case 3:
+                    rosterOrdinary = subject;
+                    switchStatue = true;
+                    pause();
+                    clearMemory();
+                    break;
+                case 4:
                     document.getElementsByClassName("importFile")[0].style.display = "block";
                     break;
             }
