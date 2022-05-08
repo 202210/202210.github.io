@@ -44,7 +44,7 @@ var food = [
     "奶茶", "咖啡", "果汁"," 凉水", "甜甜花酿鸡", "二十食堂", "再等一等"
 ];
 var rosterOrdinary = food;
-var rosterCandidate food;
+var rosterCandidate = food;
 var rosterSelected = [];
 
 var divMember = [];
