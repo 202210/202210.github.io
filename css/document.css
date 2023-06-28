@@ -129,7 +129,7 @@ li {
 
 .result {
     position: relative;
-    background-color: rgba(206, 217, 221, 1);
+    background-color: #7c3aed;
     color: #455667;
     padding: 10px;
     top: 80px;
@@ -150,7 +150,7 @@ li {
     }
 
 .result-subject {
-    background-color: rgba(216, 217, 221, 1);
+    background-color: #0f766e;
     padding-top: 5px;
     padding-bottom: 5px;
     width: 50%;
@@ -160,6 +160,6 @@ li {
 }
 
     .result-subject:hover {
-        background-color: rgba(186, 187, 191, 1);
+        background-color: #2dd4bf;
     }
 
